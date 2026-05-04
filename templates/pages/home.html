@@ -6,14 +6,9 @@
 <!-- Page Loader (Tailwind version) -->
 <div class="fixed inset-0 bg-bloom-bg-primary flex items-center justify-center z-[900] transition-opacity duration-500" id="pageLoader">
     <div class="text-center">
-        <svg class="w-16 h-16 text-bloom-accent-primary mx-auto mb-6 animate-bloom-pulse" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M24 4C24 4 28 12 28 18C28 22 26 24 24 24C22 24 20 22 20 18C20 12 24 4 24 4Z"/>
-            <path d="M24 24C24 24 16 20 12 20C8 20 6 22 6 24C6 26 8 28 12 28C16 28 24 24 24 24Z"/>
-            <path d="M24 24C24 24 32 20 36 20C40 20 42 22 42 24C42 26 40 28 36 28C32 28 24 24 24 24Z"/>
-            <path d="M24 24C24 24 20 32 20 36C20 40 22 42 24 42C26 42 28 40 28 36C28 32 24 24 24 24Z"/>
-            <circle cx="24" cy="24" r="4"/>
-            <path d="M24 42V48"/>
-        </svg>
+            {% if site_settings.logo %}
+                <img class="size-32 mx-auto mb-6 transition-transform duration-500 animate-bloom-pulse" src="{{ site_settings.logo.url }}" alt="{{ site_settings.company_name }}" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+            {% endif %}
         <div class="text-2xl font-bold tracking-widest gradient-text mb-4">{{ site_settings.company_name }}</div>
         <div class="w-48 h-0.5 bg-white/10 rounded-full overflow-hidden mx-auto">
             <div class="h-full bg-bloom-gradient w-0" id="loaderBar"></div>
@@ -155,7 +150,7 @@
             </div>
             <a href="{% url 'projects' %}" class="btn-bloom-outline group">
                 <span>{% trans "View All Projects" %}</span>
-                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
@@ -353,7 +348,7 @@
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a href="mailto:{{ site_settings.email }}" class="btn-bloom-primary text-lg px-10 py-5 w-full sm:w-auto shadow-2xl shadow-bloom-accent-primary/40 group">
                 <span>{% trans cta_button %}</span>
-                <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h- rtl:rotate-180 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
             </a>

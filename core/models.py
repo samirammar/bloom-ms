@@ -48,7 +48,7 @@ class SiteSettings(TranslatableModel):
         verbose_name_plural = _('Site Settings')
     
     def __str__(self):
-        return _('Site Settings')
+        return str(_('Site Settings'))
     
     
     @classmethod

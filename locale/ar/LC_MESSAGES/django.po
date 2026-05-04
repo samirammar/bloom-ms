@@ -1,13 +1,15 @@
-# Arabic translations for Bloom MS project.
-# Copyright (C) 2026
-# 
+# Arabic translations for bloom-ms project
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Bloom MS\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-04 04:33+0000\n"
-"PO-Revision-Date: 2026-05-04\n"
-"Last-Translator: Bloom Team\n"
+"POT-Creation-Date: 2026-05-04 05:05+0000\n"
+"PO-Revision-Date: 2026-05-04 05:05+0000\n"
+"Last-Translator: \n"
 "Language-Team: Arabic\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
@@ -29,13 +31,15 @@ msgstr "الشعار"
 
 #: core/models.py:8
 msgid "Favicon"
-msgstr "أيقونة الموقع"
+msgstr "الأيقونة"
 
-#: core/models.py:10
+#: core/models.py:10 jobs/models.py:57 pages/models.py:85
+#: templates/pages/contact.html:84 templates/pages/job_detail.html:93
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: core/models.py:11
+#: core/models.py:11 jobs/models.py:58 pages/models.py:86
+#: templates/pages/contact.html:92 templates/pages/job_detail.html:98
 msgid "Phone"
 msgstr "الهاتف"
 
@@ -73,21 +77,21 @@ msgstr "يوتيوب"
 
 #: core/models.py:23
 msgid "GitHub"
-msgstr "جيثاب"
+msgstr "جيت هب"
 
-#: core/models.py:25
+#: core/models.py:25 templates/pages/about.html:34
 msgid "Projects Completed"
 msgstr "المشاريع المكتملة"
 
-#: core/models.py:26
+#: core/models.py:26 templates/pages/about.html:38
 msgid "Happy Clients"
 msgstr "العملاء السعداء"
 
-#: core/models.py:27
+#: core/models.py:27 templates/pages/about.html:42 templates/pages/home.html:80
 msgid "Years Experience"
 msgstr "سنوات الخبرة"
 
-#: core/models.py:28
+#: core/models.py:28 templates/pages/about.html:46
 msgid "Team Members"
 msgstr "أعضاء الفريق"
 
@@ -99,7 +103,8 @@ msgstr "اسم الشركة"
 msgid "Tagline"
 msgstr "الشعار"
 
-#: core/models.py:33
+#: core/models.py:33 jobs/models.py:32 projects/models.py:49
+#: services/models.py:45
 msgid "Description"
 msgstr "الوصف"
 
@@ -109,15 +114,15 @@ msgstr "عنوان البطل"
 
 #: core/models.py:35
 msgid "Hero Subtitle"
-msgstr "العنوان الفرعي للبطل"
+msgstr "العنوان الفرعي"
 
 #: core/models.py:36
 msgid "Hero CTA Text"
-msgstr "نص زر الحث"
+msgstr "نص الزر"
 
 #: core/models.py:37
 msgid "Hero CTA Link"
-msgstr "رابط زر الحث"
+msgstr "رابط الزر"
 
 #: core/models.py:38
 msgid "About Title"
@@ -129,331 +134,27 @@ msgstr "محتوى من نحن"
 
 #: core/models.py:40
 msgid "CTA Title"
-msgstr "عنوان الحث"
+msgstr "عنوان الدعوة"
 
 #: core/models.py:41
 msgid "CTA Content"
-msgstr "محتوى الحث"
+msgstr "محتوى الدعوة"
 
 #: core/models.py:42
 msgid "CTA Button"
-msgstr "زر الحث"
+msgstr "زر الدعوة"
 
 #: core/models.py:43
 msgid "Working Hours"
 msgstr "ساعات العمل"
 
-#: core/models.py:47
+#: core/models.py:47 core/models.py:48 core/models.py:51
 msgid "Site Settings"
 msgstr "إعدادات الموقع"
 
-#: pages/models.py:9
-msgid "Home"
-msgstr "الرئيسية"
-
-#: pages/models.py:10
-msgid "About"
-msgstr "من نحن"
-
-#: pages/models.py:15
-msgid "Contact"
-msgstr "اتصل بنا"
-
-#: templates/pages/home.html:3
-msgid "Creative Digital Studio"
-msgstr "استوديو رقمي إبداعي"
-
-#: templates/pages/home.html:37
-msgid "Available for new projects"
-msgstr "متاح لمشاريع جديدة"
-
-#: templates/pages/home.html:41
-msgid "We help brands"
-msgstr "نساعد العلامات التجارية"
-
-#: templates/pages/home.html:42
-msgid "grow & flourish"
-msgstr "تنمو وتزدهر"
-
-#: templates/pages/home.html:51
-msgid "View Our Work"
-msgstr "اعرض أعمالنا"
-
-#: templates/pages/home.html:57
-msgid "Start a Project"
-msgstr "ابدأ مشروعاً"
-
-#: templates/pages/home.html:66
-msgid "Projects Delivered"
-msgstr "المشاريع المنجزة"
-
-#: templates/pages/home.html:73
-msgid "Client Satisfaction"
-msgstr "رضا العملاء"
-
-#: templates/pages/home.html:99
-msgid "What We Do"
-msgstr "ما نقدمه"
-
-#: templates/pages/home.html:102
-msgid "Services that drive"
-msgstr "خدمات تقود"
-
-#: templates/pages/home.html:103
-msgid "digital transformation"
-msgstr "التحول الرقمي"
-
-#: templates/pages/home.html:149
-msgid "Selected Work"
-msgstr "أعمال مختارة"
-
-#: templates/pages/home.html:157
-msgid "View All Projects"
-msgstr "عرض جميع المشاريع"
-
-#: templates/pages/home.html:187
-msgid "View Project"
-msgstr "عرض المشروع"
-
-#: templates/pages/home.html:216
-msgid "No projects available at the moment."
-msgstr "لا توجد مشاريع متاحة حالياً."
-
-#: templates/pages/home.html:231
-msgid "Delivered"
-msgstr "تم التسليم"
-
-#: templates/pages/home.html:235
-msgid "Clients"
-msgstr "العملاء"
-
-#: templates/pages/home.html:239
-msgid "Experience"
-msgstr "الخبرة"
-
-#: templates/pages/home.html:243
-msgid "Team"
-msgstr "الفريق"
-
-#: templates/pages/home.html:269
-msgid "Quality First"
-msgstr "الجودة أولاً"
-
-#: templates/pages/home.html:281 templates/pages/about.html:73
-msgid "On-Time Delivery"
-msgstr "التسليم في الوقت المحدد"
-
-#: templates/pages/about.html:4
-msgid "About Us"
-msgstr "من نحن"
-
-#: templates/pages/about.html:14
-msgid "Our Story"
-msgstr "قصتنا"
-
-#: templates/pages/about.html:56
-msgid "Our Core Values"
-msgstr "قيمنا الأساسية"
-
-#: templates/pages/about.html:65
-msgid "Quality Guaranteed"
-msgstr "جودة مضمونة"
-
-#: templates/pages/about.html:81
-msgid "Continuous Support"
-msgstr "دعم مستمر"
-
-#: templates/pages/services.html:4
-msgid "Our Services"
-msgstr "خدماتنا"
-
-#: templates/pages/services.html:14
-msgid "Expertise"
-msgstr "الخبرة"
-
-#: templates/pages/services.html:66
-msgid "Learn More"
-msgstr "اعرف المزيد"
-
-#: templates/pages/services.html:79
-msgid "No services found."
-msgstr "لا توجد خدمات."
-
-#: templates/pages/services.html:89
-msgid "Our Development Process"
-msgstr "عملية التطوير لدينا"
-
-#: templates/pages/services.html:95
-msgid "Discovery"
-msgstr "الاكتشاف"
-
-#: templates/pages/services.html:100
-msgid "Design"
-msgstr "التصميم"
-
-#: templates/pages/services.html:105
-msgid "Build"
-msgstr "البناء"
-
-#: templates/pages/services.html:110
-msgid "Deploy"
-msgstr "النشر"
-
-#: templates/pages/projects.html:4
-msgid "Our Projects"
-msgstr "مشاريعنا"
-
-#: templates/pages/projects.html:14
-msgid "Our Portfolio"
-msgstr "محفظة أعمالنا"
-
-#: templates/pages/projects.html:55
-msgid "Visit Website"
-msgstr "زور الموقع"
-
-#: templates/pages/projects.html:65
-msgid "No projects found."
-msgstr "لم يتم العثور على مشاريع."
-
-#: templates/pages/contact.html:4
-msgid "Contact Us"
-msgstr "اتصل بنا"
-
-#: templates/pages/contact.html:14
-msgid "Get in Touch"
-msgstr "تواصل معنا"
-
-#: templates/pages/contact.html:36
-msgid "Full Name"
-msgstr "الاسم الكامل"
-
-#: templates/pages/contact.html:40
-msgid "Email Address"
-msgstr "البريد الإلكتروني"
-
-#: templates/pages/contact.html:47
-msgid "Phone Number"
-msgstr "رقم الهاتف"
-
-#: templates/pages/contact.html:51
-msgid "Company"
-msgstr "الشركة"
-
-#: templates/pages/contact.html:57
-msgid "Subject"
-msgstr "الموضوع"
-
-#: templates/pages/contact.html:62
-msgid "Message"
-msgstr "الرسالة"
-
-#: templates/pages/contact.html:67
-msgid "Send Message"
-msgstr "إرسال الرسالة"
-
-#: templates/pages/contact.html:75
-msgid "Contact Information"
-msgstr "معلومات الاتصال"
-
-#: templates/pages/contact.html:100
-msgid "Office"
-msgstr "المكتب"
-
-#: templates/pages/contact.html:117
-msgid "Message Sent!"
-msgstr "تم إرسال الرسالة!"
-
-#: templates/pages/jobs.html:4
-msgid "Job Openings"
+#: jobs/apps.py:8 jobs/models.py:39
+msgid "Job Postings"
 msgstr "وظائف شاغرة"
-
-#: templates/pages/jobs.html:14
-msgid "Join Our Team"
-msgstr "انضم إلى فريقنا"
-
-#: templates/pages/jobs.html:60
-msgid "View Details"
-msgstr "عرض التفاصيل"
-
-#: templates/pages/jobs.html:70
-msgid "No job openings available at the moment."
-msgstr "لا توجد وظائف شاغرة حالياً."
-
-#: templates/pages/job_detail.html:14
-msgid "Back to Jobs"
-msgstr "العودة إلى الوظائف"
-
-#: templates/pages/job_detail.html:51
-msgid "Job Description"
-msgstr "وصف الوظيفة"
-
-#: templates/pages/job_detail.html:79
-msgid "Apply for"
-msgstr "قدم على"
-
-#: templates/pages/job_detail.html:89
-msgid "Enter your full name"
-msgstr "أدخل اسمك الكامل"
-
-#: templates/pages/job_detail.html:94
-msgid "Enter your email"
-msgstr "أدخل بريدك الإلكتروني"
-
-#: templates/pages/job_detail.html:99
-msgid "Enter your phone number"
-msgstr "أدخل رقم هاتفك"
-
-#: templates/pages/job_detail.html:104
-msgid "https://linkedin.com/in/yourprofile"
-msgstr "https://linkedin.com/in/yourprofile"
-
-#: templates/pages/job_detail.html:109
-msgid "Tell us why you're the perfect fit for this role..."
-msgstr "أخبرنا لماذا أنت المرشح المثالي لهذا المنصب..."
-
-#: templates/pages/job_detail.html:121
-msgid "Submit Application"
-msgstr "تقديم الطلب"
-
-#: templates/partials/navbar.html:62
-msgid "Let's Talk"
-msgstr "لنتحدث"
-
-#: templates/partials/footer.html:49
-msgid "Services"
-msgstr "الخدمات"
-
-#: templates/partials/footer.html:51
-msgid "Web Development"
-msgstr "تطوير الويب"
-
-#: templates/partials/footer.html:52
-msgid "Mobile Apps"
-msgstr "تطبيقات الهاتف"
-
-#: templates/partials/footer.html:53
-msgid "UI/UX Design"
-msgstr "تصميم UI/UX"
-
-#: templates/partials/footer.html:54
-msgid "Cloud Solutions"
-msgstr "حلول السحابة"
-
-#: templates/partials/footer.html:61
-msgid "Our Work"
-msgstr "أعمالنا"
-
-#: templates/partials/footer.html:63
-msgid "Careers"
-msgstr "وظائف"
-
-#: templates/partials/footer.html:69
-msgid "Stay Updated"
-msgstr "ابق على اطلاع"
-
-#: templates/partials/footer.html:86
-msgid "All rights reserved."
-msgstr "جميع الحقوق محفوظة."
 
 #: jobs/models.py:8
 msgid "Full Time"
@@ -473,19 +174,30 @@ msgstr "تدريب"
 
 #: jobs/models.py:15
 msgid "Job Type"
-msgstr "نوع الوظيفة"
+msgstr "نوع العمل"
 
 #: jobs/models.py:17
 msgid "Salary Range"
-msgstr "النطاق السعري"
+msgstr "نطاق الراتب"
 
-#: jobs/models.py:19
+#: jobs/models.py:19 projects/models.py:37 services/models.py:33
+#: templates/pages/job_detail.html:22 templates/pages/jobs.html:40
 msgid "Featured"
 msgstr "مميز"
 
-#: jobs/models.py:20
+#: jobs/models.py:20 projects/models.py:80 services/models.py:34
 msgid "Active"
 msgstr "نشط"
+
+#: jobs/models.py:22 pages/models.py:31 projects/models.py:40
+#: services/models.py:36
+msgid "Meta Title"
+msgstr "عنوان الميتا"
+
+#: jobs/models.py:23 pages/models.py:32 projects/models.py:41
+#: services/models.py:37
+msgid "Meta Description"
+msgstr "وصف الميتا"
 
 #: jobs/models.py:29
 msgid "Job Title"
@@ -499,13 +211,45 @@ msgstr "القسم"
 msgid "Location"
 msgstr "الموقع"
 
-#: jobs/models.py:33
+#: jobs/models.py:33 templates/pages/job_detail.html:59
 msgid "Requirements"
 msgstr "المتطلبات"
 
-#: jobs/models.py:34
+#: jobs/models.py:34 templates/pages/job_detail.html:67
 msgid "Responsibilities"
 msgstr "المسؤوليات"
+
+#: jobs/models.py:38
+msgid "Job Posting"
+msgstr "وظيفة"
+
+#: jobs/models.py:48
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#: jobs/models.py:49
+msgid "Reviewing"
+msgstr "قيد المراجعة"
+
+#: jobs/models.py:50
+msgid "Accepted"
+msgstr "مقبول"
+
+#: jobs/models.py:51
+msgid "Rejected"
+msgstr "مرفوض"
+
+#: jobs/models.py:56 pages/models.py:84
+msgid "Name"
+msgstr "الاسم"
+
+#: jobs/models.py:59 templates/pages/job_detail.html:103
+msgid "LinkedIn URL"
+msgstr "رابط لينكد إن"
+
+#: jobs/models.py:61 templates/pages/job_detail.html:108
+msgid "Cover Letter"
+msgstr "خطاب التغطية"
 
 #: jobs/models.py:63
 msgid "Status"
@@ -513,35 +257,221 @@ msgstr "الحالة"
 
 #: jobs/models.py:68
 msgid "Job Application"
-msgstr "طلب توظيف"
+msgstr "تقديم وظيفة"
+
+#: jobs/models.py:69
+msgid "Job Applications"
+msgstr "تقديمات الوظيفة"
 
 #: jobs/views.py:49
 msgid "Please fill in all required fields."
-msgstr "الرجاء ملء جميع الحقول المطلوبة."
+msgstr "يرجى ملء جميع الحقول المطلوبة."
 
 #: jobs/views.py:61
 msgid "Application submitted successfully!"
 msgstr "تم تقديم الطلب بنجاح!"
 
-#: services/models.py:43
-msgid "Service Name"
-msgstr "اسم الخدمة"
+#: pages/models.py:8
+msgid "Default"
+msgstr "الافتراضي"
 
-#: services/models.py:49
-msgid "Service"
-msgstr "خدمة"
+#: pages/models.py:9 templates/partials/navbar.html:28
+msgid "Home"
+msgstr "الرئيسية"
+
+#: pages/models.py:10 templates/pages/home.html:251
+#: templates/partials/navbar.html:32
+msgid "About"
+msgstr "من نحن"
+
+#: pages/models.py:11
+msgid "Services List"
+msgstr "قائمة الخدمات"
+
+#: pages/models.py:12
+msgid "Service Detail"
+msgstr "تفاصيل الخدمة"
+
+#: pages/models.py:13
+msgid "Projects List"
+msgstr "قائمة المش��ريع"
+
+#: pages/models.py:14
+msgid "Project Detail"
+msgstr "تفاصيل المشروع"
+
+#: pages/models.py:15 templates/partials/footer.html:64
+msgid "Contact"
+msgstr "اتصل بنا"
+
+#: pages/models.py:16
+msgid "Blog"
+msgstr "المدونة"
+
+#: pages/models.py:17
+msgid "Blog Detail"
+msgstr "تفاصيل المدونة"
+
+#: pages/models.py:20
+msgid "Template"
+msgstr "القالب"
+
+#: pages/models.py:21
+msgid "Slug"
+msgstr "الرابط"
+
+#: pages/models.py:23 projects/models.py:30
+msgid "Cover Image"
+msgstr "صورة الغلاف"
+
+#: pages/models.py:25 projects/models.py:38
+msgid "Published"
+msgstr "منشور"
+
+#: pages/models.py:26
+msgid "Featured in Menu"
+msgstr "مميز في القائمة"
+
+#: pages/models.py:27
+msgid "Show in Footer"
+msgstr "عرض في التذييل"
+
+#: pages/models.py:38
+msgid "Page Title"
+msgstr "عنوان الصفحة"
+
+#: pages/models.py:39
+msgid "Heading"
+msgstr "العنوان"
+
+#: pages/models.py:40
+msgid "Content"
+msgstr "المحتوى"
+
+#: pages/models.py:44
+msgid "Page"
+msgstr "الصفحة"
+
+#: pages/models.py:45
+msgid "Pages"
+msgstr "الصفحات"
+
+#: pages/models.py:54
+msgid "Header"
+msgstr "الترويسة"
+
+#: pages/models.py:55
+msgid "Footer"
+msgstr "التذييل"
+
+#: pages/models.py:59 projects/models.py:88
+msgid "Position"
+msgstr "الموضع"
+
+#: pages/models.py:60
+msgid "Label"
+msgstr "التسمية"
+
+#: pages/models.py:62
+msgid "Custom URL (optional)"
+msgstr "رابط مخصص (اختياري)"
+
+#: pages/models.py:65
+msgid "Navigation Item"
+msgstr "عنصر التنقل"
+
+#: pages/models.py:66
+msgid "Navigation Items"
+msgstr "عناصر التنقل"
+
+#: pages/models.py:87 projects/models.py:87 templates/pages/contact.html:51
+#: templates/partials/footer.html:59
+msgid "Company"
+msgstr "الشركة"
+
+#: pages/models.py:89 templates/pages/contact.html:57
+msgid "Subject"
+msgstr "الموضوع"
+
+#: pages/models.py:90 templates/pages/contact.html:62
+msgid "Message"
+msgstr "الرسالة"
+
+#: pages/models.py:92
+msgid "Language"
+msgstr "اللغة"
+
+#: pages/models.py:94
+msgid "Read"
+msgstr "مقروء"
+
+#: pages/models.py:95
+msgid "Replied"
+msgstr "تمت الإجابة"
+
+#: pages/models.py:100
+msgid "Contact Message"
+msgstr "رسالة الاتصال"
+
+#: pages/models.py:101
+msgid "Contact Messages"
+msgstr "رسائل الاتصال"
+
+#: projects/models.py:11 services/models.py:12
+msgid "Category Name"
+msgstr "اسم الفئة"
+
+#: projects/models.py:15
+msgid "Project Category"
+msgstr "فئة المشروع"
+
+#: projects/models.py:16
+msgid "Project Categories"
+msgstr "فئات المشاريع"
+
+#: projects/models.py:33
+msgid "Website URL"
+msgstr "رابط الموقع"
+
+#: projects/models.py:34
+msgid "Year"
+msgstr "السنة"
 
 #: projects/models.py:47
 msgid "Project Title"
 msgstr "عنوان المشروع"
 
+#: projects/models.py:48 services/models.py:44
+msgid "Short Description"
+msgstr "وصف مخصر"
+
+#: projects/models.py:50 projects/models.py:86
+msgid "Client Name"
+msgstr "اسم العميل"
+
 #: projects/models.py:54
 msgid "Project"
-msgstr "مشروع"
+msgstr "المشروع"
+
+#: projects/models.py:55
+msgid "Projects"
+msgstr "المشاريع"
 
 #: projects/models.py:63
 msgid "Image"
-msgstr "صورة"
+msgstr "الصورة"
+
+#: projects/models.py:64
+msgid "Alt Text"
+msgstr "النص البديل"
+
+#: projects/models.py:68
+msgid "Project Image"
+msgstr "صورة المشروع"
+
+#: projects/models.py:69
+msgid "Project Images"
+msgstr "صور المشاريع"
 
 #: projects/models.py:77
 msgid "Avatar"
@@ -553,8 +483,493 @@ msgstr "التقييم"
 
 #: projects/models.py:89
 msgid "Quote"
-msgstr "اقتباس"
+msgstr "الاقتباس"
 
 #: projects/models.py:93
 msgid "Testimonial"
 msgstr "شهادة"
+
+#: projects/models.py:94
+msgid "Testimonials"
+msgstr "الشهادات"
+
+#: services/admin.py:25
+msgid "Preview"
+msgstr "معاينة"
+
+#: services/models.py:8 services/models.py:29
+msgid "Font Awesome icon class"
+msgstr "فئة أيقونة فونت أوسم"
+
+#: services/models.py:16
+msgid "Service Category"
+msgstr "فئة الخدمة"
+
+#: services/models.py:17
+msgid "Service Categories"
+msgstr "فئات الخدمات"
+
+#: services/models.py:43
+msgid "Service Name"
+msgstr "اسم الخدمة"
+
+#: services/models.py:49
+msgid "Service"
+msgstr "الخدمة"
+
+#: services/models.py:50 templates/partials/footer.html:49
+#: templates/partials/navbar.html:29
+msgid "Services"
+msgstr "الخدمات"
+
+#: templates/pages/about.html:4 templates/partials/footer.html:61
+msgid "About Us"
+msgstr "من نحن"
+
+#: templates/pages/about.html:14
+msgid "Our Story"
+msgstr "قصة نجاحنا"
+
+#: templates/pages/about.html:17
+msgid "We are a team of"
+msgstr "نحن فريق من"
+
+#: templates/pages/about.html:18
+msgid "digital visionaries"
+msgstr "رواد الرقمية"
+
+#: templates/pages/about.html:56
+msgid "Our Core Values"
+msgstr "قيمنا الأساسية"
+
+#: templates/pages/about.html:57
+msgid "The principles that guide everything we do."
+msgstr "المبادئ التي توجه كل ما نقوم به."
+
+#: templates/pages/about.html:65
+msgid "Quality Guaranteed"
+msgstr "جودة مضمونة"
+
+#: templates/pages/about.html:66
+msgid ""
+"We commit to the highest quality standards in every project, ensuring every "
+"line of code is optimized."
+msgstr ""
+"نلتزم بأعلى معايير الجودة في كل مشروع، مما يضمن تحسين كل سطر من الكود."
+
+#: templates/pages/about.html:73 templates/pages/home.html:281
+msgid "On-Time Delivery"
+msgstr "التسليم في الوقت المحدد"
+
+#: templates/pages/about.html:74
+msgid ""
+"We respect your time and deadlines, delivering milestones as promised "
+"without compromise."
+msgstr ""
+"نحترم وقتك و المواعيد النهائية، وتقديم المعالم كما وعدنا دون تسوية."
+
+#: templates/pages/about.html:81
+msgid "Continuous Support"
+msgstr "دعم مستمر"
+
+#: templates/pages/about.html:82
+msgid ""
+"We are your long-term partners, providing maintenance and updates to ensure "
+"your product keeps growing."
+msgstr ""
+"نحن شركاؤك على المدى الطويل، ونقدم الصيانة والتحديثات لضمان "
+"استمرار نمو منتجك."
+
+#: templates/pages/contact.html:4
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: templates/pages/contact.html:14
+msgid "Get in Touch"
+msgstr "تواصل معنا"
+
+#: templates/pages/contact.html:17
+msgid "Let's start a"
+msgstr "لنبدأ"
+
+#: templates/pages/contact.html:18
+msgid "conversation"
+msgstr "محادثة"
+
+#: templates/pages/contact.html:21
+msgid ""
+"Have a project in mind or just want to say hi? We'd love to hear from you."
+msgstr ""
+"هل لديك مشروع في ذهنك أو تريد فقط أن تقول مرحبا؟ نحب أن نسمع منك."
+
+#: templates/pages/contact.html:36 templates/pages/job_detail.html:88
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: templates/pages/contact.html:40
+msgid "Email Address"
+msgstr "البريد الإلكتروني"
+
+#: templates/pages/contact.html:47
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: templates/pages/contact.html:67
+msgid "Send Message"
+msgstr "إرسال الرسالة"
+
+#: templates/pages/contact.html:75
+msgid "Contact Information"
+msgstr "معلومات الاتصال"
+
+#: templates/pages/contact.html:76
+msgid "Feel free to reach out through any of these channels."
+msgstr "لا تتردد في التواصل عبر أي من هذه القنوات."
+
+#: templates/pages/contact.html:100
+msgid "Office"
+msgstr "المكتب"
+
+#: templates/pages/contact.html:117
+msgid "Message Sent!"
+msgstr "تم إرسال الرسالة!"
+
+#: templates/pages/contact.html:118
+msgid "We'll get back to you shortly."
+msgstr "سنعود إليك قريباً."
+
+#: templates/pages/home.html:3
+msgid "Creative Digital Studio"
+msgstr "استوديو الإبداع الرقمي"
+
+#: templates/pages/home.html:37
+msgid "Available for new projects"
+msgstr "متاح لمشاريع جديدة"
+
+#: templates/pages/home.html:41
+msgid "We help brands"
+msgstr "نساعد العلامات التجارية"
+
+#: templates/pages/home.html:42
+msgid "grow & flourish"
+msgstr "تنمو و تزدهر"
+
+#: templates/pages/home.html:51
+msgid "View Our Work"
+msgstr "اعمالنا"
+
+#: templates/pages/home.html:57
+msgid "Start a Project"
+msgstr "ابدأ مشروعاً"
+
+#: templates/pages/home.html:66
+msgid "Projects Delivered"
+msgstr "المشاريع المسلمة"
+
+#: templates/pages/home.html:73
+msgid "Client Satisfaction"
+msgstr "رضا العملاء"
+
+#: templates/pages/home.html:89
+msgid "Scroll"
+msgstr "مرر"
+
+#: templates/pages/home.html:99
+msgid "What We Do"
+msgstr "ما الذي نقوم به"
+
+#: templates/pages/home.html:102
+msgid "Services that drive"
+msgstr "خدمات تدفع"
+
+#: templates/pages/home.html:103
+msgid "digital transformation"
+msgstr "التحول الرقمي"
+
+#: templates/pages/home.html:106
+msgid ""
+"From concept to deployment, we provide end-to-end solutions that help "
+"businesses thrive in the digital landscape."
+msgstr ""
+"من المفهوم إلى النشر، نقدم حلولاً شاملة تساعد "
+"الأعمال على الازدهار في المشهد الرقمي."
+
+#: templates/pages/home.html:149
+msgid "Selected Work"
+msgstr "أعمال مختارة"
+
+#: templates/pages/home.html:152
+msgid "Case studies that"
+msgstr "دراسات حالة"
+
+#: templates/pages/home.html:153
+msgid "speak for themselves"
+msgstr "تتحدث عن نفسها"
+
+#: templates/pages/home.html:157
+msgid "View All Projects"
+msgstr "عرض كل المشاريع"
+
+#: templates/pages/home.html:187
+msgid "View Project"
+msgstr "عرض المشروع"
+
+#: templates/pages/home.html:216
+msgid "No projects available at the moment."
+msgstr "لا توجد مشاريع متاحة حالياً."
+
+#: templates/pages/home.html:231
+msgid "Delivered"
+msgstr "سلّم"
+
+#: templates/pages/home.html:235
+msgid "Clients"
+msgstr "العملاء"
+
+#: templates/pages/home.html:239
+msgid "Experience"
+msgstr "الخبرة"
+
+#: templates/pages/home.html:243
+msgid "Team"
+msgstr "الفريق"
+
+#: templates/pages/home.html:254
+msgid "Planting seeds for"
+msgstr "نزرع بذور"
+
+#: templates/pages/home.html:255
+msgid "digital growth"
+msgstr "النمو الرقمي"
+
+#: templates/pages/home.html:269
+msgid "Quality First"
+msgstr "الجودة أولاً"
+
+#: templates/pages/home.html:270
+msgid "We never compromise on code quality or user experience."
+msgstr "لا نتخذ أبداً أي تسويات في جودة الكود أو تجربة المستخدم."
+
+#: templates/pages/home.html:282
+msgid "We respect deadlines and deliver when we promise."
+msgstr "نحترم المواعيد النهائية ونقدم عندما نوعد."
+
+#: templates/pages/job_detail.html:14
+msgid "Back to Jobs"
+msgstr "العودة للوظائف"
+
+#: templates/pages/job_detail.html:51
+msgid "Job Description"
+msgstr "وصف الوظيفة"
+
+#: templates/pages/job_detail.html:79
+msgid "Apply for"
+msgstr "قدم على"
+
+#: templates/pages/job_detail.html:80
+msgid "Fill in your details to apply for this position."
+msgstr "املأ تفاصيلك للتقدم لهذه الوظيفة."
+
+#: templates/pages/job_detail.html:89
+msgid "Enter your full name"
+msgstr "أدخل اسمك الكامل"
+
+#: templates/pages/job_detail.html:94 templates/partials/footer.html:74
+msgid "Enter your email"
+msgstr "أدخل بريدك الإلكتروني"
+
+#: templates/pages/job_detail.html:99
+msgid "Enter your phone number"
+msgstr "أدخل رقم هاتفك"
+
+#: templates/pages/job_detail.html:104
+msgid "https://linkedin.com/in/yourprofile"
+msgstr "https://linkedin.com/in/yourprofile"
+
+#: templates/pages/job_detail.html:109
+msgid "Tell us why you're the perfect fit for this role..."
+msgstr "أخبرنا لماذا أنت الخيار المثالي لهذا الدور..."
+
+#: templates/pages/job_detail.html:121
+msgid "Submit Application"
+msgstr "تقديم الطلب"
+
+#: templates/pages/jobs.html:4
+msgid "Job Openings"
+msgstr "فتحات الوظائف"
+
+#: templates/pages/jobs.html:14
+msgid "Join Our Team"
+msgstr "انضم لفريقنا"
+
+#: templates/pages/jobs.html:17
+msgid "Build your career"
+msgstr "بنِ حياتك المهنية"
+
+#: templates/pages/jobs.html:18
+msgid "with us"
+msgstr "معنا"
+
+#: templates/pages/jobs.html:21
+msgid ""
+"We're looking for talented people to join our team and help us build amazing "
+"digital experiences."
+msgstr ""
+"نبحث عن موهوبين للانضمام إلى فريقنا ومساعدتنا في بناء "
+"تجارب رقمية مذهلة."
+
+#: templates/pages/jobs.html:60
+msgid "View Details"
+msgstr "عرض التفاصيل"
+
+#: templates/pages/jobs.html:70
+msgid "No job openings available at the moment."
+msgstr "لا توجد فتحات وظيفية متاحة حالياً."
+
+#: templates/pages/projects.html:4
+msgid "Our Projects"
+msgstr "مشاريعنا"
+
+#: templates/pages/projects.html:14
+msgid "Our Portfolio"
+msgstr "محفظة أعمالنا"
+
+#: templates/pages/projects.html:17
+msgid "Showcasing our"
+msgstr "نعرض"
+
+#: templates/pages/projects.html:18
+msgid "latest creations"
+msgstr "أحدث إبداعاتنا"
+
+#: templates/pages/projects.html:21
+msgid ""
+"Explore our diverse portfolio of digital products, from high-performance web "
+"applications to intuitive mobile experiences."
+msgstr ""
+"استكشف محفظة متنوعة من المنتجات الرقمية، من تطبيقات الويب عالية الأداء "
+"إلى تجارب الهاتف الذكية."
+
+#: templates/pages/projects.html:55
+msgid "Visit Website"
+msgstr "زُر الموقع"
+
+#: templates/pages/projects.html:65
+msgid "No projects found."
+msgstr "لم يتم العثور على مشاريع."
+
+#: templates/pages/services.html:4
+msgid "Our Services"
+msgstr "خدماتنا"
+
+#: templates/pages/services.html:14
+msgid "Expertise"
+msgstr "الخبرة"
+
+#: templates/pages/services.html:17
+msgid "Specialized digital"
+msgstr "رقمية متخصصة"
+
+#: templates/pages/services.html:18
+msgid "service solutions"
+msgstr "حلول الخدمات"
+
+#: templates/pages/services.html:21
+msgid ""
+"We combine technical excellence with strategic thinking to deliver digital "
+"products that make a real impact on your business."
+msgstr ""
+"نجمع بين التميز الفني والتفكير الاستراتيجي لتقديم منتجات رقمية "
+"تحدث تأثيراً حقيقياً على عملك."
+
+#: templates/pages/services.html:66
+msgid "Learn More"
+msgstr "اعرف المزيد"
+
+#: templates/pages/services.html:79
+msgid "No services found."
+msgstr "لم يتم العثور على خدمات."
+
+#: templates/pages/services.html:89
+msgid "Our Development Process"
+msgstr "عملية التطوير الخاصة بنا"
+
+#: templates/pages/services.html:90
+msgid "How we bring your digital vision to life, step by step."
+msgstr "كيف نحقق رؤيتك الرقمية خطوة بخطوة."
+
+#: templates/pages/services.html:95
+msgid "Discovery"
+msgstr "الاكتشاف"
+
+#: templates/pages/services.html:96
+msgid "We listen and understand your goals."
+msgstr "نستمع ونفهم أهدافك."
+
+#: templates/pages/services.html:100
+msgid "Design"
+msgstr "التصميم"
+
+#: templates/pages/services.html:101
+msgid "We craft the visual and user experience."
+msgstr "نصنع التجربة المرئية والمستخدم."
+
+#: templates/pages/services.html:105
+msgid "Build"
+msgstr "البناء"
+
+#: templates/pages/services.html:106
+msgid "We write high-quality, scalable code."
+msgstr "نكتب كود عالي الجودة وقابل للتوسع."
+
+#: templates/pages/services.html:110
+msgid "Deploy"
+msgstr "النشر"
+
+#: templates/pages/services.html:111
+msgid "We launch and monitor performance."
+msgstr "نطلق ونراقب الأداء."
+
+#: templates/partials/footer.html:51
+msgid "Web Development"
+msgstr "تطوير الويب"
+
+#: templates/partials/footer.html:52
+msgid "Mobile Apps"
+msgstr "تطبيقات الهاتف"
+
+#: templates/partials/footer.html:53
+msgid "UI/UX Design"
+msgstr "تصميم واجهة المستخدم"
+
+#: templates/partials/footer.html:54
+msgid "Cloud Solutions"
+msgstr "الحلول السحابية"
+
+#: templates/partials/footer.html:62
+msgid "Our Work"
+msgstr "أعمالنا"
+
+#: templates/partials/footer.html:63 templates/partials/navbar.html:31
+msgid "Careers"
+msgstr "وظائف"
+
+#: templates/partials/footer.html:69
+msgid "Stay Updated"
+msgstr "ابق على اطلاع"
+
+#: templates/partials/footer.html:71
+msgid "Subscribe to our newsletter for the latest updates and insights."
+msgstr "اشترك في نشرتنا البريدية للحصول على آخر التحديثات."
+
+#: templates/partials/footer.html:86
+msgid "All rights reserved."
+msgstr "جميع الحقوق محفوظة."
+
+#: templates/partials/navbar.html:30
+msgid "Work"
+msgstr "العمل"
+
+#: templates/partials/navbar.html:62
+msgid "Let's Talk"
+msgstr "لنتحدث"

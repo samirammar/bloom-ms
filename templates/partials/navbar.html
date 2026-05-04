@@ -1,0 +1,94 @@
+{% load i18n static %}
+<nav class="fixed top-0 left-0 right-0 z-[300] transition-all duration-300 py-4" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <a href="{% url 'home' %}" class="flex items-center gap-2 group z-10">
+            {% if site_settings.logo %}
+                <img src="{{ site_settings.logo.url }}" alt="{{ site_settings.company_name }}" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+            {% else %}
+                <svg class="w-8 h-8 text-bloom-accent-primary transition-all group-hover:rotate-12 group-hover:scale-110" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M24 4C24 4 28 12 28 18C28 22 26 24 24 24C22 24 20 22 20 18C20 12 24 4 24 4Z"/>
+                    <path d="M24 24C24 24 16 20 12 20C8 20 6 22 6 24C6 26 8 28 12 28C16 28 24 24 24 24Z"/>
+                    <path d="M24 24C24 24 32 20 36 20C40 20 42 22 42 24C42 26 40 28 36 28C32 28 24 24 24 24Z"/>
+                    <path d="M24 24C24 24 20 32 20 36C20 40 22 42 24 42C26 42 28 40 28 36C28 32 24 24 24 24Z"/>
+                    <circle cx="24" cy="24" r="4" fill="currentColor" class="opacity-20"/>
+                    <path d="M24 42V48"/>
+                </svg>
+                <span class="text-xl font-bold tracking-wider text-bloom-text-primary">{{ site_settings.company_name }}</span>
+            {% endif %}
+        </a>
+        
+        <button class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 z-10" id="navToggle" aria-label="Toggle navigation">
+            <span class="w-6 h-0.5 bg-bloom-text-primary rounded-full transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-bloom-text-primary rounded-full transition-all duration-300"></span>
+            <span class="w-6 h-0.5 bg-bloom-text-primary rounded-full transition-all duration-300"></span>
+        </button>
+        
+        <div class="hidden lg:flex items-center gap-8" id="navMenu">
+            <ul class="flex items-center gap-8">
+                <li><a href="{% url 'home' %}" class="text-sm font-medium text-bloom-text-secondary hover:text-bloom-text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-bloom-gradient after:transition-all hover:after:w-full">{% trans "Home" %}</a></li>
+                <li><a href="{% url 'services' %}" class="text-sm font-medium text-bloom-text-secondary hover:text-bloom-text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-bloom-gradient after:transition-all hover:after:w-full">{% trans "Services" %}</a></li>
+                <li><a href="{% url 'projects' %}" class="text-sm font-medium text-bloom-text-secondary hover:text-bloom-text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-bloom-gradient after:transition-all hover:after:w-full">{% trans "Work" %}</a></li>
+                <li><a href="{% url 'jobs:jobs_list' %}" class="text-sm font-medium text-bloom-text-secondary hover:text-bloom-text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-bloom-gradient after:transition-all hover:after:w-full">{% trans "Careers" %}</a></li>
+                <li><a href="{% url 'about' %}" class="text-sm font-medium text-bloom-text-secondary hover:text-bloom-text-primary transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-bloom-gradient after:transition-all hover:after:w-full">{% trans "About" %}</a></li>
+            </ul>
+            <div class="flex items-center gap-4 ml-4">
+                <!-- Language Switcher -->
+                <div class="flex gap-2">
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        {% if language.code != LANGUAGE_CODE %}
+                        <form action="{% url 'set_language' %}" method="post" class="inline">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ request.path }}">
+                            <input name="language" type="hidden" value="{{ language.code }}">
+                            <button type="submit" class="font-mono text-xs font-bold px-2 py-1 border border-white/10 rounded hover:border-bloom-accent-primary hover:text-bloom-accent-primary transition-all">
+                                {{ language.code|upper }}
+                            </button>
+                        </form>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <button class="w-10 h-10 flex items-center justify-center rounded-lg border border-white/10 text-bloom-text-secondary hover:border-bloom-accent-primary hover:text-bloom-accent-primary transition-all" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5 block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="w-5 h-5 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <a href="{% url 'contact' %}" class="btn-bloom-primary text-sm px-5 py-2.5">{% trans "Let's Talk" %}</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('bg-bloom-bg-tertiary/70', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'py-3');
+            navbar.classList.remove('py-4');
+        } else {
+            navbar.classList.remove('bg-bloom-bg-tertiary/70', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'py-3');
+            navbar.classList.add('py-4');
+        }
+    });
+
+    // Mobile menu toggle logic
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+            navMenu.classList.toggle('fixed');
+            navMenu.classList.toggle('inset-0');
+            navMenu.classList.toggle('flex');
+            navMenu.classList.toggle('bg-bloom-bg-primary');
+            navMenu.classList.toggle('z-[50]');
+        });
+    }
+</script>

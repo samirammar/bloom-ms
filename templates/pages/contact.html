@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Contact Us" %} - {{ site_settings.company_name }}{% endblock %}
+
+{% block content %}
+<div class="pt-24 bg-bloom-bg-primary min-h-screen">
+    <!-- Header -->
+    <section class="relative py-20 px-6 overflow-hidden text-center">
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-bloom-accent-primary/10 blur-[100px] rounded-full animate-bloom-float"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="inline-flex items-center gap-2 text-bloom-accent-primary text-xs font-bold uppercase tracking-widest mb-4">
+                <span class="w-6 h-px bg-bloom-accent-primary"></span>
+                {% trans "Get in Touch" %}
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                {% trans "Let's start a" %}<br>
+                <span class="gradient-text">{% trans "conversation" %}</span>
+            </h1>
+            <p class="text-bloom-text-secondary max-w-2xl mx-auto text-lg leading-relaxed">
+                {% trans "Have a project in mind or just want to say hi? We'd love to hear from you." %}
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div class="glass-panel p-8 md:p-12 rounded-[2rem] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-bloom-accent-primary/5 blur-3xl rounded-full"></div>
+                    <form id="contactForm" class="relative z-10 space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-bloom-text-secondary">{% trans "Full Name" %} *</label>
+                                <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bloom-text-primary focus:outline-none focus:border-bloom-accent-primary transition-all" placeholder="John Doe">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-bloom-text-secondary">{% trans "Email Address" %} *</label>
+                                <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bloom-text-primary focus:outline-none focus:border-bloom-accent-primary transition-all" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-bloom-text-secondary">{% trans "Phone Number" %}</label>
+                                <input type="tel" name="phone" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bloom-text-primary focus:outline-none focus:border-bloom-accent-primary transition-all" placeholder="+1 (555) 000-0000">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-bloom-text-secondary">{% trans "Company" %}</label>
+                                <input type="text" name="company" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bloom-text-primary focus:outline-none focus:border-bloom-accent-primary transition-all" placeholder="Acme Inc.">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-bloom-text-secondary">{% trans "Subject" %} *</label>
+                            <input type="text" name="subject" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bloom-text-primary focus:outline-none focus:border-bloom-accent-primary transition-all" placeholder="How can we help?">
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-bloom-text-secondary">{% trans "Message" %} *</label>
+                            <textarea name="message" rows="5" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-bloom-text-primary focus:outline-none focus:border-bloom-accent-primary transition-all resize-none" placeholder="Tell us more about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-bloom-primary w-full py-4 text-lg shadow-xl shadow-bloom-accent-primary/20">
+                            {% trans "Send Message" %}
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-10">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-bold">{% trans "Contact Information" %}</h3>
+                        <p class="text-bloom-text-secondary">{% trans "Feel free to reach out through any of these channels." %}</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-8 bg-bloom-bg-tertiary/50 border border-white/5 rounded-3xl hover:border-bloom-accent-primary transition-all">
+                            <div class="w-12 h-12 bg-bloom-accent-primary/10 text-bloom-accent-primary rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div class="text-xs text-bloom-text-tertiary uppercase font-bold mb-1">{% trans "Email" %}</div>
+                            <div class="text-bloom-text-primary font-bold break-all">{{ site_settings.email }}</div>
+                        </div>
+                        
+                        <div class="p-8 bg-bloom-bg-tertiary/50 border border-white/5 rounded-3xl hover:border-bloom-accent-secondary transition-all">
+                            <div class="w-12 h-12 bg-bloom-accent-secondary/10 text-bloom-accent-secondary rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            </div>
+                            <div class="text-xs text-bloom-text-tertiary uppercase font-bold mb-1">{% trans "Phone" %}</div>
+                            <div class="text-bloom-text-primary font-bold">{{ site_settings.phone }}</div>
+                        </div>
+                        
+                        <div class="p-8 bg-bloom-bg-tertiary/50 border border-white/5 rounded-3xl hover:border-bloom-accent-tertiary transition-all md:col-span-2">
+                            <div class="w-12 h-12 bg-bloom-accent-tertiary/10 text-bloom-accent-tertiary rounded-xl flex items-center justify-center mb-6">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div class="text-xs text-bloom-text-tertiary uppercase font-bold mb-1">{% trans "Office" %}</div>
+                            <div class="text-bloom-text-primary font-bold">{% trans site_settings.address %}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Success Toast -->
+<div class="fixed bottom-8 right-8 z-[1000] hidden" id="contactToast">
+    <div class="bg-bloom-bg-tertiary border border-bloom-status-success rounded-2xl p-6 shadow-2xl flex items-center gap-4 animate-fade-up">
+        <div class="w-10 h-10 bg-bloom-status-success/10 text-bloom-status-success rounded-full flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <div>
+            <div class="font-bold">{% trans "Message Sent!" %}</div>
+            <div class="text-sm text-bloom-text-tertiary">{% trans "We'll get back to you shortly." %}</div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const toast = document.getElementById('contactToast');
+    
+    fetch('{% url "contact" %}', {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': '{{ csrf_token }}',
+        },
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 5000);
+            this.reset();
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+</script>
+{% endblock %}

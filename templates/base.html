@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_CODE == 'ar' %}rtl{% else %}ltr{% endif %}" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% load static i18n %}
+    
+    {% block meta_tags %}
+    <title>{% block title %}{{ site_settings.company_name }}{% endblock %}</title>
+    <meta name="description" content="{{ site_settings.description }}">
+    {% endblock %}
+    
+    {% if site_settings.favicon %}
+    <link rel="icon" type="image/x-icon" href="{{ site_settings.favicon.url }}">
+    {% endif %}
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS with Nexus Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: ['class', '[data-theme="dark"]'],
+        theme: {
+          extend: {
+            colors: {
+              'bloom-bg': {
+                primary: '#0d1f17',
+                secondary: '#142920',
+                tertiary: '#1b362a',
+                elevated: '#234234',
+                card: 'rgba(27, 54, 42, 0.8)',
+              },
+              'bloom-text': {
+                primary: '#f8faf9',
+                secondary: '#a8c4b0',
+                tertiary: '#6b9a7a',
+                muted: '#4a6b55',
+              },
+              'bloom-accent': {
+                primary: '#4ade80',
+                secondary: '#22d3ee',
+                tertiary: '#f472b6',
+              },
+              'bloom-status': {
+                success: '#22c55e',
+                warning: '#fbbf24',
+                error: '#f87171',
+                info: '#22d3ee',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+              arabic: ['Cairo', 'sans-serif'],
+            },
+            backgroundImage: {
+              'bloom-gradient': 'linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #f472b6 100%)',
+              'bloom-mesh': 'radial-gradient(circle at 50% 50%, rgba(74, 222, 128, 0.15), transparent)',
+            },
+            borderRadius: {
+              'xl': '1rem',
+              '2xl': '1.5rem',
+              '3xl': '2rem',
+            },
+            animation: {
+              'bloom-pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bloom-float': 'float 20s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+                '25%': { transform: 'translate(50px, -50px) scale(1.1)' },
+                '50%': { transform: 'translate(-30px, 30px) scale(0.95)' },
+                '75%': { transform: 'translate(30px, 50px) scale(1.05)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style type="text/tailwindcss">
+      @layer components {
+        .gradient-text {
+          @apply bg-clip-text text-transparent bg-bloom-gradient;
+        }
+        .glass-panel {
+          @apply bg-bloom-bg-tertiary/70 backdrop-blur-xl border border-white/10;
+        }
+        .btn-bloom {
+          @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+        }
+        .btn-bloom-primary {
+          @apply btn-bloom bg-bloom-gradient text-white shadow-lg hover:shadow-bloom-accent-primary/20 hover:-translate-y-0.5;
+        }
+        .btn-bloom-outline {
+          @apply btn-bloom border border-white/20 text-bloom-text-primary hover:border-bloom-accent-primary hover:text-bloom-accent-primary hover:bg-bloom-accent-primary/5;
+        }
+        .section-container {
+          @apply max-w-7xl mx-auto px-6 py-24;
+        }
+      }
+    </style>
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-bloom-bg-primary text-bloom-text-primary font-{% if LANGUAGE_CODE == 'ar' %}arabic{% else %}sans{% endif %} {% if LANGUAGE_CODE == 'ar' %}rtl{% endif %} selection:bg-bloom-accent-primary selection:text-white">
+
+    
+    {% include 'partials/navbar.html' %}
+    
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'partials/footer.html' %}
+    
+    <!-- JavaScript -->
+    <script>
+        // Theme management
+        const getTheme = () => localStorage.getItem('theme') || 'dark';
+        const setTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        };
+
+        // Initialize theme
+        setTheme(getTheme());
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const newTheme = getTheme() === 'dark' ? 'light' : 'dark';
+                    setTheme(newTheme);
+                });
+            }
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

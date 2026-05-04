@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Our Projects" %} - {{ site_settings.company_name }}{% endblock %}
+
+{% block content %}
+<div class="pt-24 bg-bloom-bg-primary">
+    <!-- Header -->
+    <section class="relative py-20 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-bloom-accent-primary/10 blur-[100px] rounded-full animate-bloom-float"></div>
+        <div class="max-w-7xl mx-auto relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 text-bloom-accent-primary text-xs font-bold uppercase tracking-widest mb-4">
+                <span class="w-6 h-px bg-bloom-accent-primary"></span>
+                {% trans "Our Portfolio" %}
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                {% trans "Showcasing our" %}<br>
+                <span class="gradient-text">{% trans "latest creations" %}</span>
+            </h1>
+            <p class="text-bloom-text-secondary max-w-2xl mx-auto text-lg leading-relaxed">
+                {% trans "Explore our diverse portfolio of digital products, from high-performance web applications to intuitive mobile experiences." %}
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            {% if projects %}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {% for project in projects %}
+                <!-- Project Card -->
+                <div class="group bg-bloom-bg-tertiary/50 border border-white/5 rounded-3xl overflow-hidden hover:border-bloom-accent-primary/50 transition-all duration-500">
+                    <div class="aspect-video relative overflow-hidden">
+                        {% if project.cover_image %}
+                            <img src="{{ project.cover_image.url }}" alt="{{ project.title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        {% else %}
+                            <img src="{% static 'img/placeholder-project.jpg' %}" alt="{{ project.title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        {% endif %}
+                        <div class="absolute inset-0 bg-gradient-to-t from-bloom-bg-primary to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex gap-2 mb-4">
+                            {% if project.category %}
+                                <span class="px-2 py-1 bg-bloom-accent-primary/10 text-bloom-accent-primary text-[10px] font-bold rounded uppercase">{{ project.category.name }}</span>
+                            {% endif %}
+                            <span class="px-2 py-1 bg-white/5 text-bloom-text-tertiary text-[10px] font-bold rounded">{{ project.year }}</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-bloom-accent-primary transition-colors">{{ project.title }}</h3>
+                        <p class="text-bloom-text-secondary text-sm leading-relaxed mb-6">
+                            {{ project.short_description }}
+                        </p>
+                        {% if project.website_url %}
+                        <a href="{{ project.website_url }}" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-bloom-text-primary group/link hover:text-bloom-accent-primary transition-colors">
+                            {% trans "Visit Website" %}
+                            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="text-center py-20 bg-white/5 rounded-[3rem] border border-dashed border-white/10">
+                <p class="text-bloom-text-tertiary">{% trans "No projects found." %}</p>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto glass-panel rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-bloom-accent-primary/10 blur-[80px] rounded-full"></div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">{% trans cta_title %}</h2>
+                <p class="text-bloom-text-secondary text-lg mb-10 max-w-2xl mx-auto">{% trans cta_content %}</p>
+                <a href="{% url 'contact' %}" class="btn-bloom-primary px-10 py-5 text-lg">
+                    {% trans cta_button %}
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

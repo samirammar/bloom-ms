@@ -30,7 +30,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for project in projects %}
                 <!-- Project Card -->
-                <div class="group bg-bloom-bg-tertiary/50 border border-white/5 rounded-3xl overflow-hidden hover:border-bloom-accent-primary/50 transition-all duration-500">
+                <div class="group bg-bloom-bg-tertiary/50 border border-white/5 rounded-lg overflow-hidden hover:border-bloom-accent-primary/50 transition-all duration-500">
                     <div class="aspect-video relative overflow-hidden">
                         {% if project.cover_image %}
                             <img src="{{ project.cover_image.url }}" alt="{{ project.title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -53,7 +53,7 @@
                         {% if project.website_url %}
                         <a href="{{ project.website_url }}" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-bloom-text-primary group/link hover:text-bloom-accent-primary transition-colors">
                             {% trans "Visit Website" %}
-                            <svg class="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
                         {% endif %}
                     </div>

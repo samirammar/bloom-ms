@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from django.core.mail import send_mail
 from django.conf import settings
 from django.template.loader import render_to_string
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Page, ContactMessage
 from core.models import SiteSettings
@@ -95,6 +96,7 @@ def projects(request):
     return render(request, 'pages/projects.html', context)
 
 
+@csrf_exempt
 def contact(request):
     site_settings = SiteSettings.get_settings()
     

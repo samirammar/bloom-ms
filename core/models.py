@@ -1,6 +1,30 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from parler.models import TranslatableModel, TranslatedFields
+
+
+class TeamMember(TranslatableModel):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True, related_name='team_member')
+    name = models.CharField(max_length=200, verbose_name=_('Name'))
+    image = models.ImageField(upload_to='team/', blank=True, null=True, verbose_name=_('Image'))
+    linkedin_url = models.URLField(blank=True, verbose_name=_('LinkedIn'))
+    twitter_url = models.URLField(blank=True, verbose_name=_('Twitter'))
+    order = models.PositiveIntegerField(default=0, verbose_name=_('Order'))
+    is_active = models.BooleanField(default=True, verbose_name=_('Active'))
+
+    translations = TranslatedFields(
+        role = models.CharField(max_length=200, verbose_name=_('Role')),
+        bio = models.TextField(blank=True, verbose_name=_('Bio')),
+    )
+
+    class Meta:
+        verbose_name = _('Team Member')
+        verbose_name_plural = _('Team Members')
+        ordering = ['order']
+
+    def __str__(self):
+        return self.name or ''
 
 
 class SiteSettings(TranslatableModel):

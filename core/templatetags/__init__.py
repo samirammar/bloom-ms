@@ -1,0 +1,1 @@
+# Empty file to make core/templatetags a Python package

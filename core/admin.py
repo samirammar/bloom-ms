@@ -1,8 +1,16 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 from parler.admin import TranslatableAdmin
-from .models import SiteSettings
+from .models import SiteSettings, TeamMember
 from unfold.admin import ModelAdmin
+
+
+@admin.register(TeamMember)
+class TeamMemberAdmin(TranslatableAdmin, ModelAdmin):
+    list_display = ['name', 'role', 'order', 'is_active']
+    list_filter = ['is_active']
+    ordering = ['order']
+    search_fields = ['name', 'role']
 
 @admin.register(SiteSettings)
 class SiteSettingsAdmin(TranslatableAdmin, ModelAdmin):

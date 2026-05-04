@@ -42,14 +42,14 @@
                             {% csrf_token %}
                             <input name="next" type="hidden" value="{{ request.path }}">
                             <input name="language" type="hidden" value="{{ language.code }}">
-                            <button type="submit" class="font-mono text-xs font-bold px-2 py-1 border border-white/10 rounded hover:border-bloom-accent-primary hover:text-bloom-accent-primary transition-all">
-                                {{ language.code|upper }}
+                            <button type="submit" class="text-lg leading-none hover:scale-125 transition-transform" title="{{ language.name }}">
+                                {% if language.code == 'ar' %}🇪🇬{% elif language.code == 'en' %}🇬🇧{% else %}🌐{% endif %}
                             </button>
                         </form>
                         {% endif %}
                     {% endfor %}
                 </div>
-
+                <!--
                 <button class="w-10 h-10 flex items-center justify-center rounded-lg border border-white/10 text-bloom-text-secondary hover:border-bloom-accent-primary hover:text-bloom-accent-primary transition-all" id="themeToggle" aria-label="Toggle dark mode">
                     <svg class="w-5 h-5 block dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="5"/>
@@ -59,6 +59,7 @@
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
                     </svg>
                 </button>
+                -->
                 <a href="{% url 'contact' %}" class="btn-bloom-primary text-sm px-5 py-2.5">{% trans "Let's Talk" %}</a>
             </div>
         </div>

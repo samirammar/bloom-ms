@@ -14,6 +14,23 @@ def site_settings(request):
     }
 
 
+def global_settings(request):
+    """Add all global settings to context"""
+    site = site_settings(request)
+    nav = navigation(request)
+    services = featured_services(request)
+    projects = featured_projects(request)
+    tests = testimonials(request)
+    
+    return {
+        **site,
+        **nav,
+        **services,
+        **projects,
+        **tests,
+    }
+
+
 def navigation(request):
     """Add navigation items to context"""
     header_items = Page.objects.filter(

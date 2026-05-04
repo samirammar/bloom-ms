@@ -6,14 +6,6 @@ from services.models import Service
 from projects.models import Project, Testimonial
 
 
-def site_settings(request):
-    """Add site settings to context"""
-    settings = SiteSettings.get_settings()
-    return {
-        'site_settings': settings,
-    }
-
-
 def global_settings(request):
     """Add all global settings to context"""
     site = site_settings(request)
@@ -22,12 +14,25 @@ def global_settings(request):
     projects = featured_projects(request)
     tests = testimonials(request)
     
+    current_lang = translation.get_language()
+    if not current_lang:
+        current_lang = 'en'
+    
     return {
         **site,
         **nav,
         **services,
         **projects,
         **tests,
+        'LANGUAGE_CODE': current_lang,
+    }
+
+
+def site_settings(request):
+    """Add site settings to context"""
+    settings = SiteSettings.get_settings()
+    return {
+        'site_settings': settings,
     }
 
 

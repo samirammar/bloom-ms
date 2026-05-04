@@ -1,428 +1,547 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# Arabic translations for Bloom MS project.
+# Copyright (C) 2026
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Bloom MS\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-04 03:03+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2026-05-04 04:33+0000\n"
+"PO-Revision-Date: 2026-05-04\n"
+"Last-Translator: Bloom Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: core/admin.py:10
-msgid "General"
-msgstr "عام"
+#: config/settings.py:9
+msgid "English"
+msgstr "الإنجليزية"
 
-#: core/admin.py:13 pages/models.py:14 templates/partials/footer.html:44
-#: templates/partials/navbar.html:20 templates/partials/navbar.html:67
-msgid "Contact"
-msgstr "اتصل بنا"
-
-#: core/admin.py:16
-msgid "Social Links"
-msgstr "روابط التواصل الاجتماعي"
-
-#: core/admin.py:20
-msgid "Hero Section"
-msgstr "قسم الهيرو"
-
-#: core/admin.py:23
-msgid "About Section"
-msgstr "قسم من نحن"
-
-#: core/admin.py:26
-msgid "Stats"
-msgstr "الإحصائيات"
-
-#: core/admin.py:29
-msgid "CTA Section"
-msgstr "قسم دعوة العمل"
+#: config/settings.py:10
+msgid "Arabic"
+msgstr "العربية"
 
 #: core/models.py:7
-msgid "Company Name"
-msgstr "اسم الشركة"
-
-#: core/models.py:9
-msgid "Tagline"
-msgstr "شعار الشركة"
-
-#: core/models.py:11 projects/models.py:30 services/models.py:28
-msgid "Description"
-msgstr "الوصف"
-
-#: core/models.py:13
 msgid "Logo"
 msgstr "الشعار"
 
-#: core/models.py:14
+#: core/models.py:8
 msgid "Favicon"
 msgstr "أيقونة الموقع"
 
-#: core/models.py:16 pages/models.py:82 templates/pages/contact.html:25
-#: templates/pages/contact.html:68
+#: core/models.py:10
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
-#: core/models.py:17 pages/models.py:83 templates/pages/contact.html:32
-#: templates/pages/contact.html:79
+#: core/models.py:11
 msgid "Phone"
 msgstr "الهاتف"
 
-#: core/models.py:18
+#: core/models.py:12
 msgid "WhatsApp"
 msgstr "واتساب"
 
-#: core/models.py:20 templates/pages/contact.html:91
+#: core/models.py:14
 msgid "Address"
 msgstr "العنوان"
 
-#: core/models.py:22
+#: core/models.py:16
 msgid "Map Link"
 msgstr "رابط الخريطة"
 
-#: core/models.py:24
+#: core/models.py:18
 msgid "Facebook"
 msgstr "فيسبوك"
 
-#: core/models.py:25
+#: core/models.py:19
 msgid "Twitter"
 msgstr "تويتر"
 
-#: core/models.py:26
+#: core/models.py:20
 msgid "Instagram"
-msgstr "انستقرام"
+msgstr "إنستغرام"
 
-#: core/models.py:27
+#: core/models.py:21
 msgid "LinkedIn"
 msgstr "لينكد إن"
 
-#: core/models.py:28
+#: core/models.py:22
 msgid "YouTube"
 msgstr "يوتيوب"
 
-#: core/models.py:29
+#: core/models.py:23
 msgid "GitHub"
-msgstr "جيتهاب"
+msgstr "جيثاب"
+
+#: core/models.py:25
+msgid "Projects Completed"
+msgstr "المشاريع المكتملة"
+
+#: core/models.py:26
+msgid "Happy Clients"
+msgstr "العملاء السعداء"
+
+#: core/models.py:27
+msgid "Years Experience"
+msgstr "سنوات الخبرة"
+
+#: core/models.py:28
+msgid "Team Members"
+msgstr "أعضاء الفريق"
 
 #: core/models.py:31
-msgid "Hero Title"
-msgstr "عنوان الهيرو"
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#: core/models.py:32
+msgid "Tagline"
+msgstr "الشعار"
 
 #: core/models.py:33
-msgid "Hero Subtitle"
-msgstr "العنوان الفرعي للهيرو"
+msgid "Description"
+msgstr "الوصف"
+
+#: core/models.py:34
+msgid "Hero Title"
+msgstr "عنوان البطل"
 
 #: core/models.py:35
-msgid "Hero CTA Text"
-msgstr "نص زر الهيرو"
+msgid "Hero Subtitle"
+msgstr "العنوان الفرعي للبطل"
 
 #: core/models.py:36
+msgid "Hero CTA Text"
+msgstr "نص زر الحث"
+
+#: core/models.py:37
 msgid "Hero CTA Link"
-msgstr "رابط زر الهيرو"
+msgstr "رابط زر الحث"
 
 #: core/models.py:38
 msgid "About Title"
 msgstr "عنوان من نحن"
 
-#: core/models.py:40
+#: core/models.py:39
 msgid "About Content"
 msgstr "محتوى من نحن"
 
-#: core/models.py:42 templates/pages/about.html:23 templates/pages/home.html:51
-msgid "Projects Completed"
-msgstr "المشاريع المكتملة"
-
-#: core/models.py:43 templates/pages/about.html:27 templates/pages/home.html:55
-msgid "Happy Clients"
-msgstr "العملاء السعداء"
-
-#: core/models.py:44 templates/pages/about.html:31 templates/pages/home.html:59
-msgid "Years Experience"
-msgstr "سنوات الخبرة"
-
-#: core/models.py:45 templates/pages/about.html:35 templates/pages/home.html:63
-msgid "Team Members"
-msgstr "أعضاء الفريق"
-
-#: core/models.py:47
+#: core/models.py:40
 msgid "CTA Title"
-msgstr "عنوان دعوة العمل"
+msgstr "عنوان الحث"
 
-#: core/models.py:49
+#: core/models.py:41
 msgid "CTA Content"
-msgstr "محتوى دعوة العمل"
+msgstr "محتوى الحث"
 
-#: core/models.py:51
+#: core/models.py:42
 msgid "CTA Button"
-msgstr "زر دعوة العمل"
+msgstr "زر الحث"
 
-#: core/models.py:53 templates/pages/contact.html:99
-#: templates/partials/footer.html:77
+#: core/models.py:43
 msgid "Working Hours"
 msgstr "ساعات العمل"
 
-#: core/models.py:56 core/models.py:57 core/models.py:60
+#: core/models.py:47
 msgid "Site Settings"
 msgstr "إعدادات الموقع"
 
-#: pages/admin.py:16 projects/admin.py:31 services/admin.py:30
-msgid "Basic Info"
-msgstr "معلومات أساسية"
-
-#: pages/admin.py:19 pages/models.py:24 projects/admin.py:34
-#: services/admin.py:33
-msgid "Content"
-msgstr "المحتوى"
-
-#: pages/admin.py:22 projects/admin.py:67 services/admin.py:36
-msgid "Settings"
-msgstr "الإعدادات"
-
-#: pages/admin.py:25 projects/admin.py:40 services/admin.py:39
-msgid "SEO"
-msgstr "تحسين محركات البحث"
-
-#: pages/models.py:7
-msgid "Default"
-msgstr "افتراضي"
-
-#: pages/models.py:8 templates/partials/navbar.html:16
-#: templates/partials/navbar.html:63
+#: pages/models.py:9
 msgid "Home"
 msgstr "الرئيسية"
 
-#: pages/models.py:9 templates/partials/footer.html:41
-#: templates/partials/navbar.html:17 templates/partials/navbar.html:64
+#: pages/models.py:10
 msgid "About"
 msgstr "من نحن"
 
-#: pages/models.py:10
-msgid "Services List"
-msgstr "قائمة الخدمات"
-
-#: pages/models.py:11
-msgid "Service Detail"
-msgstr "تفاصيل الخدمة"
-
-#: pages/models.py:12
-msgid "Projects List"
-msgstr "قائمة المشاريع"
-
-#: pages/models.py:13
-msgid "Project Detail"
-msgstr "تفاصيل المشروع"
-
 #: pages/models.py:15
-msgid "Blog"
-msgstr "المدونة"
+msgid "Contact"
+msgstr "اتصل بنا"
 
-#: pages/models.py:16
-msgid "Blog Detail"
-msgstr "تفاصيل التدوينة"
+#: templates/pages/home.html:3
+msgid "Creative Digital Studio"
+msgstr "استوديو رقمي إبداعي"
 
-#: pages/models.py:19
-msgid "Template"
-msgstr "القالب"
+#: templates/pages/home.html:37
+msgid "Available for new projects"
+msgstr "متاح لمشاريع جديدة"
 
-#: pages/models.py:20
-msgid "Slug"
-msgstr "الاسم اللطيف (Slug)"
+#: templates/pages/home.html:41
+msgid "We help brands"
+msgstr "نساعد العلامات التجارية"
 
-#: pages/models.py:22
-msgid "Page Title"
-msgstr "عنوان الصفحة"
+#: templates/pages/home.html:42
+msgid "grow & flourish"
+msgstr "تنمو وتزدهر"
 
-#: pages/models.py:23
-msgid "Heading"
-msgstr "العنوان الرئيسي"
+#: templates/pages/home.html:51
+msgid "View Our Work"
+msgstr "اعرض أعمالنا"
 
-#: pages/models.py:26 projects/models.py:32
-msgid "Cover Image"
-msgstr "صورة الغلاف"
+#: templates/pages/home.html:57
+msgid "Start a Project"
+msgstr "ابدأ مشروعاً"
 
-#: pages/models.py:28 projects/models.py:40
-msgid "Published"
-msgstr "منشور"
+#: templates/pages/home.html:66
+msgid "Projects Delivered"
+msgstr "المشاريع المنجزة"
 
-#: pages/models.py:29
-msgid "Featured in Menu"
-msgstr "مميز في القائمة"
+#: templates/pages/home.html:73
+msgid "Client Satisfaction"
+msgstr "رضا العملاء"
 
-#: pages/models.py:30
-msgid "Show in Footer"
-msgstr "عرض في التذييل"
+#: templates/pages/home.html:99
+msgid "What We Do"
+msgstr "ما نقدمه"
 
-#: pages/models.py:34 projects/models.py:42 services/models.py:37
-msgid "Meta Title"
-msgstr "عنوان الميتا"
+#: templates/pages/home.html:102
+msgid "Services that drive"
+msgstr "خدمات تقود"
 
-#: pages/models.py:35 projects/models.py:43 services/models.py:38
-msgid "Meta Description"
-msgstr "وصف الميتا"
+#: templates/pages/home.html:103
+msgid "digital transformation"
+msgstr "التحول الرقمي"
 
-#: pages/models.py:41
-msgid "Page"
-msgstr "صفحة"
+#: templates/pages/home.html:149
+msgid "Selected Work"
+msgstr "أعمال مختارة"
 
-#: pages/models.py:42
-msgid "Pages"
-msgstr "صفحات"
+#: templates/pages/home.html:157
+msgid "View All Projects"
+msgstr "عرض جميع المشاريع"
 
-#: pages/models.py:51
-msgid "Header"
-msgstr "الترويسة"
+#: templates/pages/home.html:187
+msgid "View Project"
+msgstr "عرض المشروع"
 
-#: pages/models.py:52
-msgid "Footer"
-msgstr "التذييل"
+#: templates/pages/home.html:216
+msgid "No projects available at the moment."
+msgstr "لا توجد مشاريع متاحة حالياً."
 
-#: pages/models.py:56 projects/models.py:74
-msgid "Position"
-msgstr "الموقع"
+#: templates/pages/home.html:231
+msgid "Delivered"
+msgstr "تم التسليم"
 
-#: pages/models.py:57
-msgid "Label"
-msgstr "التسمية"
+#: templates/pages/home.html:235
+msgid "Clients"
+msgstr "العملاء"
 
-#: pages/models.py:59
-msgid "Custom URL (optional)"
-msgstr "رابط مخصص (اختياري)"
+#: templates/pages/home.html:239
+msgid "Experience"
+msgstr "الخبرة"
 
-#: pages/models.py:62
-msgid "Navigation Item"
-msgstr "عنصر القائمة"
+#: templates/pages/home.html:243
+msgid "Team"
+msgstr "الفريق"
 
-#: pages/models.py:63
-msgid "Navigation Items"
-msgstr "عناصر القائمة"
+#: templates/pages/home.html:269
+msgid "Quality First"
+msgstr "الجودة أولاً"
 
-#: pages/models.py:81 templates/pages/contact.html:21
-msgid "Name"
-msgstr "الاسم"
+#: templates/pages/home.html:281 templates/pages/about.html:73
+msgid "On-Time Delivery"
+msgstr "التسليم في الوقت المحدد"
 
-#: pages/models.py:84 projects/models.py:73 templates/pages/contact.html:36
+#: templates/pages/about.html:4
+msgid "About Us"
+msgstr "من نحن"
+
+#: templates/pages/about.html:14
+msgid "Our Story"
+msgstr "قصتنا"
+
+#: templates/pages/about.html:56
+msgid "Our Core Values"
+msgstr "قيمنا الأساسية"
+
+#: templates/pages/about.html:65
+msgid "Quality Guaranteed"
+msgstr "جودة مضمونة"
+
+#: templates/pages/about.html:81
+msgid "Continuous Support"
+msgstr "دعم مستمر"
+
+#: templates/pages/services.html:4
+msgid "Our Services"
+msgstr "خدماتنا"
+
+#: templates/pages/services.html:14
+msgid "Expertise"
+msgstr "الخبرة"
+
+#: templates/pages/services.html:66
+msgid "Learn More"
+msgstr "اعرف المزيد"
+
+#: templates/pages/services.html:79
+msgid "No services found."
+msgstr "لا توجد خدمات."
+
+#: templates/pages/services.html:89
+msgid "Our Development Process"
+msgstr "عملية التطوير لدينا"
+
+#: templates/pages/services.html:95
+msgid "Discovery"
+msgstr "الاكتشاف"
+
+#: templates/pages/services.html:100
+msgid "Design"
+msgstr "التصميم"
+
+#: templates/pages/services.html:105
+msgid "Build"
+msgstr "البناء"
+
+#: templates/pages/services.html:110
+msgid "Deploy"
+msgstr "النشر"
+
+#: templates/pages/projects.html:4
+msgid "Our Projects"
+msgstr "مشاريعنا"
+
+#: templates/pages/projects.html:14
+msgid "Our Portfolio"
+msgstr "محفظة أعمالنا"
+
+#: templates/pages/projects.html:55
+msgid "Visit Website"
+msgstr "زور الموقع"
+
+#: templates/pages/projects.html:65
+msgid "No projects found."
+msgstr "لم يتم العثور على مشاريع."
+
+#: templates/pages/contact.html:4
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: templates/pages/contact.html:14
+msgid "Get in Touch"
+msgstr "تواصل معنا"
+
+#: templates/pages/contact.html:36
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: templates/pages/contact.html:40
+msgid "Email Address"
+msgstr "البريد الإلكتروني"
+
+#: templates/pages/contact.html:47
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: templates/pages/contact.html:51
 msgid "Company"
 msgstr "الشركة"
 
-#: pages/models.py:86 templates/pages/contact.html:42
+#: templates/pages/contact.html:57
 msgid "Subject"
 msgstr "الموضوع"
 
-#: pages/models.py:87 templates/pages/contact.html:47
+#: templates/pages/contact.html:62
 msgid "Message"
 msgstr "الرسالة"
 
-#: pages/models.py:89
-msgid "Language"
-msgstr "اللغة"
+#: templates/pages/contact.html:67
+msgid "Send Message"
+msgstr "إرسال الرسالة"
 
-#: pages/models.py:91
-msgid "Read"
-msgstr "مقروء"
+#: templates/pages/contact.html:75
+msgid "Contact Information"
+msgstr "معلومات الاتصال"
 
-#: pages/models.py:92
-msgid "Replied"
-msgstr "تم الرد"
+#: templates/pages/contact.html:100
+msgid "Office"
+msgstr "المكتب"
 
-#: pages/models.py:97
-msgid "Contact Message"
-msgstr "رسالة تواصل"
+#: templates/pages/contact.html:117
+msgid "Message Sent!"
+msgstr "تم إرسال الرسالة!"
 
-#: pages/models.py:98
-msgid "Contact Messages"
-msgstr "رسائل التواصل"
+#: templates/pages/jobs.html:4
+msgid "Job Openings"
+msgstr "وظائف شاغرة"
 
-#: projects/admin.py:9
-msgid "Gallery Image"
-msgstr "صورة المعرض"
+#: templates/pages/jobs.html:14
+msgid "Join Our Team"
+msgstr "انضم إلى فريقنا"
 
-#: projects/admin.py:10
-msgid "Gallery Images"
-msgstr "صور المعرض"
+#: templates/pages/jobs.html:60
+msgid "View Details"
+msgstr "عرض التفاصيل"
 
-#: projects/admin.py:37
-msgid "Details"
-msgstr "التفاصيل"
+#: templates/pages/jobs.html:70
+msgid "No job openings available at the moment."
+msgstr "لا توجد وظائف شاغرة حالياً."
 
-#: projects/admin.py:61
-msgid "Client Info"
-msgstr "معلومات العميل"
+#: templates/pages/job_detail.html:14
+msgid "Back to Jobs"
+msgstr "العودة إلى الوظائف"
 
-#: projects/admin.py:64 projects/models.py:75
-msgid "Quote"
-msgstr "الاقتباس"
+#: templates/pages/job_detail.html:51
+msgid "Job Description"
+msgstr "وصف الوظيفة"
 
-#: projects/models.py:6 services/models.py:6
-msgid "Category Name"
-msgstr "اسم القسم"
+#: templates/pages/job_detail.html:79
+msgid "Apply for"
+msgstr "قدم على"
 
-#: projects/models.py:11
-msgid "Project Category"
-msgstr "قسم المشاريع"
+#: templates/pages/job_detail.html:89
+msgid "Enter your full name"
+msgstr "أدخل اسمك الكامل"
 
-#: projects/models.py:12
-msgid "Project Categories"
-msgstr "أقسام المشاريع"
+#: templates/pages/job_detail.html:94
+msgid "Enter your email"
+msgstr "أدخل بريدك الإلكتروني"
 
-#: projects/models.py:20
-msgid "Project Title"
-msgstr "عنوان المشروع"
+#: templates/pages/job_detail.html:99
+msgid "Enter your phone number"
+msgstr "أدخل رقم هاتفك"
 
-#: projects/models.py:23 projects/models.py:72
-msgid "Client Name"
-msgstr "اسم العميل"
+#: templates/pages/job_detail.html:104
+msgid "https://linkedin.com/in/yourprofile"
+msgstr "https://linkedin.com/in/yourprofile"
 
-#: projects/models.py:28 services/models.py:26
-msgid "Short Description"
-msgstr "وصف قصير"
+#: templates/pages/job_detail.html:109
+msgid "Tell us why you're the perfect fit for this role..."
+msgstr "أخبرنا لماذا أنت المرشح المثالي لهذا المنصب..."
 
-#: projects/models.py:35
-msgid "Website URL"
-msgstr "رابط الموقع"
+#: templates/pages/job_detail.html:121
+msgid "Submit Application"
+msgstr "تقديم الطلب"
 
-#: projects/models.py:36
-msgid "Year"
-msgstr "السنة"
+#: templates/partials/navbar.html:62
+msgid "Let's Talk"
+msgstr "لنتحدث"
 
-#: projects/models.py:39 services/models.py:34
+#: templates/partials/footer.html:49
+msgid "Services"
+msgstr "الخدمات"
+
+#: templates/partials/footer.html:51
+msgid "Web Development"
+msgstr "تطوير الويب"
+
+#: templates/partials/footer.html:52
+msgid "Mobile Apps"
+msgstr "تطبيقات الهاتف"
+
+#: templates/partials/footer.html:53
+msgid "UI/UX Design"
+msgstr "تصميم UI/UX"
+
+#: templates/partials/footer.html:54
+msgid "Cloud Solutions"
+msgstr "حلول السحابة"
+
+#: templates/partials/footer.html:61
+msgid "Our Work"
+msgstr "أعمالنا"
+
+#: templates/partials/footer.html:63
+msgid "Careers"
+msgstr "وظائف"
+
+#: templates/partials/footer.html:69
+msgid "Stay Updated"
+msgstr "ابق على اطلاع"
+
+#: templates/partials/footer.html:86
+msgid "All rights reserved."
+msgstr "جميع الحقوق محفوظة."
+
+#: jobs/models.py:8
+msgid "Full Time"
+msgstr "دوام كامل"
+
+#: jobs/models.py:9
+msgid "Part Time"
+msgstr "دوام جزئي"
+
+#: jobs/models.py:10
+msgid "Contract"
+msgstr "عقد"
+
+#: jobs/models.py:11
+msgid "Internship"
+msgstr "تدريب"
+
+#: jobs/models.py:15
+msgid "Job Type"
+msgstr "نوع الوظيفة"
+
+#: jobs/models.py:17
+msgid "Salary Range"
+msgstr "النطاق السعري"
+
+#: jobs/models.py:19
 msgid "Featured"
 msgstr "مميز"
 
-#: projects/models.py:49
+#: jobs/models.py:20
+msgid "Active"
+msgstr "نشط"
+
+#: jobs/models.py:29
+msgid "Job Title"
+msgstr "عنوان الوظيفة"
+
+#: jobs/models.py:30
+msgid "Department"
+msgstr "القسم"
+
+#: jobs/models.py:31
+msgid "Location"
+msgstr "الموقع"
+
+#: jobs/models.py:33
+msgid "Requirements"
+msgstr "المتطلبات"
+
+#: jobs/models.py:34
+msgid "Responsibilities"
+msgstr "المسؤوليات"
+
+#: jobs/models.py:63
+msgid "Status"
+msgstr "الحالة"
+
+#: jobs/models.py:68
+msgid "Job Application"
+msgstr "طلب توظيف"
+
+#: jobs/views.py:49
+msgid "Please fill in all required fields."
+msgstr "الرجاء ملء جميع الحقول المطلوبة."
+
+#: jobs/views.py:61
+msgid "Application submitted successfully!"
+msgstr "تم تقديم الطلب بنجاح!"
+
+#: services/models.py:43
+msgid "Service Name"
+msgstr "اسم الخدمة"
+
+#: services/models.py:49
+msgid "Service"
+msgstr "خدمة"
+
+#: projects/models.py:47
+msgid "Project Title"
+msgstr "عنوان المشروع"
+
+#: projects/models.py:54
 msgid "Project"
 msgstr "مشروع"
 
-#: projects/models.py:50 templates/partials/footer.html:43
-#: templates/partials/navbar.html:19 templates/partials/navbar.html:66
-msgid "Projects"
-msgstr "مشاريعنا"
-
-#: projects/models.py:58
-#: venv/lib/python3.14/site-packages/django/db/models/fields/files.py:420
+#: projects/models.py:63
 msgid "Image"
 msgstr "صورة"
-
-#: projects/models.py:59
-msgid "Alt Text"
-msgstr "النص البديل"
-
-#: projects/models.py:63
-msgid "Project Image"
-msgstr "صورة المشروع"
-
-#: projects/models.py:64
-msgid "Project Images"
-msgstr "صور المشروع"
 
 #: projects/models.py:77
 msgid "Avatar"
@@ -432,1780 +551,10 @@ msgstr "الصورة الشخصية"
 msgid "Rating"
 msgstr "التقييم"
 
-#: projects/models.py:80 services/models.py:35
-msgid "Active"
-msgstr "نشط"
+#: projects/models.py:89
+msgid "Quote"
+msgstr "اقتباس"
 
-#: projects/models.py:86
+#: projects/models.py:93
 msgid "Testimonial"
-msgstr "توصية"
-
-#: projects/models.py:87
-msgid "Testimonials"
-msgstr "التوصيات"
-
-#: services/models.py:8 services/models.py:30
-msgid "Font Awesome icon class"
-msgstr "كلاس أيقونة Font Awesome"
-
-#: services/models.py:12
-msgid "Service Category"
-msgstr "قسم الخدمات"
-
-#: services/models.py:13
-msgid "Service Categories"
-msgstr "أقسام الخدمات"
-
-#: services/models.py:21
-msgid "Service Name"
-msgstr "اسم الخدمة"
-
-#: services/models.py:44
-msgid "Service"
-msgstr "خدمة"
-
-#: services/models.py:45 templates/partials/footer.html:42
-#: templates/partials/navbar.html:18 templates/partials/navbar.html:65
-msgid "Services"
-msgstr "خدماتنا"
-
-#: templates/pages/about.html:4
-msgid "About Us"
-msgstr "من نحن"
-
-#: templates/pages/about.html:44
-msgid "Why Choose Us"
-msgstr "لماذا تختارنا"
-
-#: templates/pages/about.html:54
-msgid "Quality Guaranteed"
-msgstr "جودة مضمونة"
-
-#: templates/pages/about.html:55
-msgid "We commit to the highest quality standards in every project"
-msgstr "نلتزم بأعلى معايير الجودة في كل مشروع"
-
-#: templates/pages/about.html:64
-msgid "On-Time Delivery"
-msgstr "التسليم في الوقت المحدد"
-
-#: templates/pages/about.html:65
-msgid "We always meet the specified deadlines"
-msgstr "نلتزم دائماً بالمواعيد النهائية المحددة"
-
-#: templates/pages/about.html:74
-msgid "Continuous Support"
-msgstr "دعم مستمر"
-
-#: templates/pages/about.html:75
-msgid "We provide continuous technical support after the project"
-msgstr "نقدم دعماً فنياً مستمراً بعد انتهاء المشروع"
-
-#: templates/pages/contact.html:4 templates/pages/contact.html:12
-#: templates/partials/footer.html:49
-msgid "Contact Us"
-msgstr "اتصل بنا"
-
-#: templates/pages/contact.html:13
-msgid "We are here to answer your questions and help you"
-msgstr "نحن هنا للإجابة على استفساراتكم ومساعدتكم"
-
-#: templates/pages/contact.html:52
-msgid "Send Message"
-msgstr "إرسال الرسالة"
-
-#: templates/pages/contact.html:59
-msgid "Contact Information"
-msgstr "معلومات التواصل"
-
-#: templates/pages/contact.html:123
-msgid "Message sent successfully!"
-msgstr "تم إرسال الرسالة بنجاح!"
-
-#: templates/pages/home.html:16
-msgid "Building Digital Excellence"
-msgstr "بناء التميز الرقمي"
-
-#: templates/pages/home.html:33
-msgid "View Our Work"
-msgstr "شاهد أعمالنا"
-
-#: templates/pages/home.html:72 templates/pages/services.html:4
-#: templates/pages/services.html:12
-msgid "Our Services"
-msgstr "خدماتنا"
-
-#: templates/pages/home.html:73 templates/pages/services.html:13
-msgid "We provide comprehensive specialized software services"
-msgstr "نقدم خدمات برمجية متخصصة وشاملة"
-
-#: templates/pages/home.html:83 templates/pages/services.html:23
-msgid "Software Development"
-msgstr "تطوير البرمجيات"
-
-#: templates/pages/home.html:84
-msgid "Custom software solutions tailored to your business needs"
-msgstr "حلول برمجية مخصصة حسب احتياجات عملك"
-
-#: templates/pages/home.html:86 templates/pages/home.html:102
-#: templates/pages/home.html:118
-msgid "Learn more"
-msgstr "تعرف على المزيد"
-
-#: templates/pages/home.html:99 templates/pages/services.html:33
-msgid "Microservices Architecture"
-msgstr "معمارية الميكروسيرفيس"
-
-#: templates/pages/home.html:100
-msgid "Design and implement advanced microservices architecture"
-msgstr "تصميم وتنفيذ معمارية ميكروسيرفيس متقدمة"
-
-#: templates/pages/home.html:115 templates/pages/services.html:43
-msgid "Web Development"
-msgstr "تطوير الويب"
-
-#: templates/pages/home.html:116
-msgid "Modern and integrated web applications"
-msgstr "تطبيقات ويب حديثة ومتكاملة"
-
-#: templates/pages/home.html:128
-msgid "View All Services"
-msgstr "عرض جميع الخدمات"
-
-#: templates/pages/home.html:137
-msgid "Featured Projects"
-msgstr "أعمالنا المميزة"
-
-#: templates/pages/home.html:138 templates/pages/projects.html:13
-msgid "Explore some of our previous work"
-msgstr "استكشف بعضاً من أعمالنا السابقة"
-
-#: templates/pages/home.html:149 templates/pages/projects.html:24
-msgid "Sample Project 1"
-msgstr "مشروع تجريبي 1"
-
-#: templates/pages/home.html:150 templates/pages/home.html:162
-#: templates/pages/home.html:174
-msgid "Project description"
-msgstr "وصف المشروع"
-
-#: templates/pages/home.html:161 templates/pages/projects.html:36
-msgid "Sample Project 2"
-msgstr "مشروع تجريبي 2"
-
-#: templates/pages/home.html:173 templates/pages/projects.html:48
-msgid "Sample Project 3"
-msgstr "مشروع تجريبي 3"
-
-#: templates/pages/home.html:181
-msgid "View All Projects"
-msgstr "عرض جميع المشاريع"
-
-#: templates/pages/projects.html:4 templates/pages/projects.html:12
-msgid "Our Projects"
-msgstr "مشاريعنا"
-
-#: templates/pages/projects.html:25 templates/pages/projects.html:37
-#: templates/pages/projects.html:49
-msgid "Project description comes here"
-msgstr "وصف المشروع يأتي هنا"
-
-#: templates/pages/services.html:24
-msgid ""
-"Custom software solutions tailored to your business needs. We develop "
-"desktop, web, and mobile applications."
-msgstr "حلول برمجية مخصصة حسب احتياجات عملك. نقوم بتطوير تطبيقات سطح المكتب والويب والجوال."
-
-#: templates/pages/services.html:34
-msgid ""
-"Design and implement advanced microservices architecture. We build scalable "
-"and reliable systems."
-msgstr "تصميم وتنفيذ معمارية ميكروسيرفيس متقدمة. نقوم ببناء أنظمة قابلة للتطوير وموثوقة."
-
-#: templates/pages/services.html:44
-msgid ""
-"Modern and integrated web applications using the latest technologies. We "
-"build responsive and fast websites."
-msgstr "تطبيقات ويب حديثة ومتكاملة باستخدام أحدث التقنيات. نقوم ببناء مواقع سريعة ومتجاوبة."
-
-#: templates/pages/services.html:53
-msgid "API Development"
-msgstr "تطوير الواجهات البرمجية (API)"
-
-#: templates/pages/services.html:54
-msgid ""
-"Develop secure and scalable APIs. We design and implement professional APIs."
-msgstr "تطوير واجهات برمجية آمنة وقابلة للتطوير. نقوم بتصميم وتنفيذ واجهات برمجية احترافية."
-
-#: templates/pages/services.html:63
-msgid "Technical Consulting"
-msgstr "استشارات فنية"
-
-#: templates/pages/services.html:64
-msgid ""
-"We provide specialized technical consulting to help your business grow and "
-"thrive."
-msgstr "نقدم استشارات فنية متخصصة لمساعدة عملك على النمو والازدهار."
-
-#: templates/pages/services.html:74
-msgid "System Maintenance"
-msgstr "صيانة الأنظمة"
-
-#: templates/pages/services.html:75
-msgid ""
-"We provide regular maintenance and update services for your software systems."
-msgstr "نقدم خدمات صيانة وتحديث دورية لأنظمتك البرمجية."
-
-#: templates/partials/footer.html:39
-msgid "Quick Links"
-msgstr "روابط سريعة"
-
-#: templates/partials/footer.html:75
-msgid "All rights reserved"
-msgstr "جميع الحقوق محفوظة"
-
-#: venv/lib/python3.14/site-packages/django/contrib/messages/apps.py:16
-msgid "Messages"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/contrib/sitemaps/apps.py:8
-msgid "Site Maps"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/contrib/staticfiles/apps.py:9
-msgid "Static Files"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/contrib/syndication/apps.py:7
-msgid "Syndication"
-msgstr ""
-
-#. Translators: String used to replace omitted page numbers in elided page
-#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
-#: venv/lib/python3.14/site-packages/django/core/paginator.py:33
-msgid "…"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/paginator.py:35
-msgid "That page number is not an integer"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/paginator.py:36
-msgid "That page number is less than 1"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/paginator.py:37
-msgid "That page contains no results"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:22
-msgid "Enter a valid value."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:70
-msgid "Enter a valid domain name."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:153
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:773
-msgid "Enter a valid URL."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:200
-msgid "Enter a valid integer."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:211
-msgid "Enter a valid email address."
-msgstr ""
-
-#. Translators: "letters" means latin letters: a-z and A-Z.
-#: venv/lib/python3.14/site-packages/django/core/validators.py:289
-msgid ""
-"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:297
-msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:309
-#: venv/lib/python3.14/site-packages/django/core/validators.py:318
-#: venv/lib/python3.14/site-packages/django/core/validators.py:332
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2220
-#, python-format
-msgid "Enter a valid %(protocol)s address."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:311
-msgid "IPv4"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:320
-#: venv/lib/python3.14/site-packages/django/utils/ipv6.py:43
-msgid "IPv6"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:334
-msgid "IPv4 or IPv6"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:375
-msgid "Enter only digits separated by commas."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:381
-#, python-format
-msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:416
-#, python-format
-msgid "Ensure this value is less than or equal to %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:425
-#, python-format
-msgid "Ensure this value is greater than or equal to %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:434
-#, python-format
-msgid "Ensure this value is a multiple of step size %(limit_value)s."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:441
-#, python-format
-msgid ""
-"Ensure this value is a multiple of step size %(limit_value)s, starting from "
-"%(offset)s, e.g. %(offset)s, %(valid_value1)s, %(valid_value2)s, and so on."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:473
-#, python-format
-msgid ""
-"Ensure this value has at least %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at least %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:491
-#, python-format
-msgid ""
-"Ensure this value has at most %(limit_value)d character (it has "
-"%(show_value)d)."
-msgid_plural ""
-"Ensure this value has at most %(limit_value)d characters (it has "
-"%(show_value)d)."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:514
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:364
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:403
-msgid "Enter a number."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:516
-#, python-format
-msgid "Ensure that there are no more than %(max)s digit in total."
-msgid_plural "Ensure that there are no more than %(max)s digits in total."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:521
-#, python-format
-msgid "Ensure that there are no more than %(max)s decimal place."
-msgid_plural "Ensure that there are no more than %(max)s decimal places."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:526
-#, python-format
-msgid ""
-"Ensure that there are no more than %(max)s digit before the decimal point."
-msgid_plural ""
-"Ensure that there are no more than %(max)s digits before the decimal point."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:597
-#, python-format
-msgid ""
-"File extension “%(extension)s” is not allowed. Allowed extensions are: "
-"%(allowed_extensions)s."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/core/validators.py:659
-msgid "Null characters are not allowed."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/base.py:1633
-#: venv/lib/python3.14/site-packages/django/forms/models.py:932
-msgid "and"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/base.py:1635
-#, python-format
-msgid "%(model_name)s with this %(field_labels)s already exists."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/constraints.py:20
-#, python-format
-msgid "Constraint “%(name)s” is violated."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:134
-#, python-format
-msgid "Value %(value)r is not a valid choice."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:135
-msgid "This field cannot be null."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:136
-msgid "This field cannot be blank."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:137
-#, python-format
-msgid "%(model_name)s with this %(field_label)s already exists."
-msgstr ""
-
-#. Translators: The 'lookup_type' is one of 'date', 'year' or
-#. 'month'. Eg: "Title must be unique for pub_date year"
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:141
-#, python-format
-msgid ""
-"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:180
-#, python-format
-msgid "Field of type: %(field_type)s"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1161
-#, python-format
-msgid "“%(value)s” value must be either True or False."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1162
-#, python-format
-msgid "“%(value)s” value must be either True, False, or None."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1164
-msgid "Boolean (Either True or False)"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1214
-#, python-format
-msgid "String (up to %(max_length)s)"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1216
-msgid "String (unlimited)"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1325
-msgid "Comma-separated integers"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1426
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
-"format."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1430
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1565
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
-"date."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1434
-msgid "Date (without time)"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1561
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ] format."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1569
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1574
-msgid "Date (with time)"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1701
-#, python-format
-msgid "“%(value)s” value must be a decimal number."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1703
-msgid "Decimal number"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1864
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] "
-"[[HH:]MM:]ss[.uuuuuu] format."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1868
-msgid "Duration"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1920
-msgid "Email address"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:1945
-msgid "File path"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2023
-#, python-format
-msgid "“%(value)s” value must be a float."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2025
-msgid "Floating point number"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2065
-#, python-format
-msgid "“%(value)s” value must be an integer."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2067
-msgid "Integer"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2163
-msgid "Big (8 byte) integer"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2180
-msgid "Small integer"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2188
-msgid "IPv4 address"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2219
-msgid "IP address"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2310
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2311
-#, python-format
-msgid "“%(value)s” value must be either None, True or False."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2313
-msgid "Boolean (Either True, False or None)"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2364
-msgid "Positive big integer"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2379
-msgid "Positive integer"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2394
-msgid "Positive small integer"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2410
-#, python-format
-msgid "Slug (up to %(max_length)s)"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2446
-msgid "Text"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2526
-#, python-format
-msgid ""
-"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
-"format."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2530
-#, python-format
-msgid ""
-"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
-"invalid time."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2534
-msgid "Time"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2642
-msgid "URL"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2666
-msgid "Raw binary data"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2731
-#, python-format
-msgid "“%(value)s” is not a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/__init__.py:2733
-msgid "Universally unique identifier"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/files.py:244
-msgid "File"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/json.py:24
-msgid "A JSON object"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/json.py:26
-msgid "Value must be valid JSON."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/related.py:974
-#, python-format
-msgid "%(model)s instance with %(field)s %(value)r is not a valid choice."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/related.py:977
-msgid "Foreign Key (type determined by related field)"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/related.py:1271
-msgid "One-to-one relationship"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/related.py:1328
-#, python-format
-msgid "%(from)s-%(to)s relationship"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/related.py:1330
-#, python-format
-msgid "%(from)s-%(to)s relationships"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/db/models/fields/related.py:1378
-msgid "Many-to-many relationship"
-msgstr ""
-
-#. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to
-#. the label
-#: venv/lib/python3.14/site-packages/django/forms/boundfield.py:188
-msgid ":?.!"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:91
-msgid "This field is required."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:313
-msgid "Enter a whole number."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:484
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:1241
-msgid "Enter a valid date."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:507
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:1242
-msgid "Enter a valid time."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:534
-msgid "Enter a valid date/time."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:568
-msgid "Enter a valid duration."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:569
-#, python-brace-format
-msgid "The number of days must be between {min_days} and {max_days}."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:638
-msgid "No file was submitted. Check the encoding type on the form."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:639
-msgid "No file was submitted."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:640
-msgid "The submitted file is empty."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:642
-#, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
-msgid_plural ""
-"Ensure this filename has at most %(max)d characters (it has %(length)d)."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:647
-msgid "Please either submit a file or check the clear checkbox, not both."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:715
-msgid ""
-"Upload a valid image. The file you uploaded was either not an image or a "
-"corrupted image."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:862
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:949
-#: venv/lib/python3.14/site-packages/django/forms/models.py:1621
-#, python-format
-msgid "Select a valid choice. %(value)s is not one of the available choices."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:951
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:1070
-#: venv/lib/python3.14/site-packages/django/forms/models.py:1619
-msgid "Enter a list of values."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:1071
-msgid "Enter a complete value."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:1313
-msgid "Enter a valid UUID."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/fields.py:1343
-msgid "Enter a valid JSON."
-msgstr ""
-
-#. Translators: This is the default suffix added to form field labels
-#: venv/lib/python3.14/site-packages/django/forms/forms.py:97
-msgid ":"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/forms.py:239
-#, python-format
-msgid "(Hidden field %(name)s) %(error)s"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/formsets.py:61
-#, python-format
-msgid ""
-"ManagementForm data is missing or has been tampered with. Missing fields: "
-"%(field_names)s. You may need to file a bug report if the issue persists."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/formsets.py:65
-#, python-format
-msgid "Please submit at most %(num)d form."
-msgid_plural "Please submit at most %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/forms/formsets.py:70
-#, python-format
-msgid "Please submit at least %(num)d form."
-msgid_plural "Please submit at least %(num)d forms."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/forms/formsets.py:484
-#: venv/lib/python3.14/site-packages/django/forms/formsets.py:491
-msgid "Order"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/formsets.py:499
-msgid "Delete"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/models.py:925
-#, python-format
-msgid "Please correct the duplicate data for %(field)s."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/models.py:930
-#, python-format
-msgid "Please correct the duplicate data for %(field)s, which must be unique."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/models.py:937
-#, python-format
-msgid ""
-"Please correct the duplicate data for %(field_name)s which must be unique "
-"for the %(lookup)s in %(date_field)s."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/models.py:946
-msgid "Please correct the duplicate values below."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/models.py:1383
-msgid "The inline value did not match the parent instance."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/models.py:1474
-msgid "Select a valid choice. That choice is not one of the available choices."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/models.py:1623
-#, python-format
-msgid "“%(pk)s” is not a valid value."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/utils.py:229
-#, python-format
-msgid ""
-"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
-"may be ambiguous or it may not exist."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/widgets.py:528
-msgid "Clear"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/widgets.py:529
-msgid "Currently"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/widgets.py:530
-msgid "Change"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/widgets.py:869
-msgid "Unknown"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/widgets.py:870
-msgid "Yes"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/forms/widgets.py:871
-msgid "No"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/tasks/base.py:34
-msgctxt "Task"
-msgid "Ready"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/tasks/base.py:36
-msgctxt "Task"
-msgid "Running"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/tasks/base.py:38
-msgctxt "Task"
-msgid "Failed"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/tasks/base.py:40
-msgctxt "Task"
-msgid "Successful"
-msgstr ""
-
-#. Translators: Please do not add spaces around commas.
-#: venv/lib/python3.14/site-packages/django/template/defaultfilters.py:878
-msgid "yes,no,maybe"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/template/defaultfilters.py:908
-#: venv/lib/python3.14/site-packages/django/template/defaultfilters.py:925
-#, python-format
-msgid "%(size)d byte"
-msgid_plural "%(size)d bytes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/template/defaultfilters.py:927
-#, python-format
-msgid "%s KB"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/template/defaultfilters.py:929
-#, python-format
-msgid "%s MB"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/template/defaultfilters.py:931
-#, python-format
-msgid "%s GB"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/template/defaultfilters.py:933
-#, python-format
-msgid "%s TB"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/template/defaultfilters.py:935
-#, python-format
-msgid "%s PB"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dateformat.py:74
-msgid "p.m."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dateformat.py:75
-msgid "a.m."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dateformat.py:80
-msgid "PM"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dateformat.py:81
-msgid "AM"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dateformat.py:153
-msgid "midnight"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dateformat.py:155
-msgid "noon"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:7
-msgid "Monday"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:8
-msgid "Tuesday"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:9
-msgid "Wednesday"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:10
-msgid "Thursday"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:11
-msgid "Friday"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:12
-msgid "Saturday"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:13
-msgid "Sunday"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:16
-msgid "Mon"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:17
-msgid "Tue"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:18
-msgid "Wed"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:19
-msgid "Thu"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:20
-msgid "Fri"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:21
-msgid "Sat"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:22
-msgid "Sun"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:25
-msgid "January"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:26
-msgid "February"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:27
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:28
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:29
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:30
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:31
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:32
-msgid "August"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:33
-msgid "September"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:34
-msgid "October"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:35
-msgid "November"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:36
-msgid "December"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:39
-msgid "jan"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:40
-msgid "feb"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:41
-msgid "mar"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:42
-msgid "apr"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:43
-msgid "may"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:44
-msgid "jun"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:45
-msgid "jul"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:46
-msgid "aug"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:47
-msgid "sep"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:48
-#, fuzzy
-#| msgid "Contact"
-msgid "oct"
-msgstr "اتصل بنا"
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:49
-msgid "nov"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:50
-msgid "dec"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:53
-msgctxt "abbrev. month"
-msgid "Jan."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:54
-msgctxt "abbrev. month"
-msgid "Feb."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:55
-msgctxt "abbrev. month"
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:56
-msgctxt "abbrev. month"
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:57
-msgctxt "abbrev. month"
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:58
-msgctxt "abbrev. month"
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:59
-msgctxt "abbrev. month"
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:60
-msgctxt "abbrev. month"
-msgid "Aug."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:61
-msgctxt "abbrev. month"
-msgid "Sept."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:62
-msgctxt "abbrev. month"
-msgid "Oct."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:63
-msgctxt "abbrev. month"
-msgid "Nov."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:64
-msgctxt "abbrev. month"
-msgid "Dec."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:67
-msgctxt "alt. month"
-msgid "January"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:68
-msgctxt "alt. month"
-msgid "February"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:69
-msgctxt "alt. month"
-msgid "March"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:70
-msgctxt "alt. month"
-msgid "April"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:71
-msgctxt "alt. month"
-msgid "May"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:72
-msgctxt "alt. month"
-msgid "June"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:73
-msgctxt "alt. month"
-msgid "July"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:74
-msgctxt "alt. month"
-msgid "August"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:75
-msgctxt "alt. month"
-msgid "September"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:76
-msgctxt "alt. month"
-msgid "October"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:77
-msgctxt "alt. month"
-msgid "November"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/dates.py:78
-msgctxt "alt. month"
-msgid "December"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/ipv6.py:20
-msgid "This is not a valid IPv6 address."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/text.py:76
-#, python-format
-msgctxt "String to return when truncating text"
-msgid "%(truncated_text)s…"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/text.py:282
-msgid "or"
-msgstr ""
-
-#. Translators: This string is used as a separator between list elements
-#: venv/lib/python3.14/site-packages/django/utils/text.py:301
-#: venv/lib/python3.14/site-packages/django/utils/timesince.py:135
-msgid ", "
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/utils/timesince.py:8
-#, python-format
-msgid "%(num)d year"
-msgid_plural "%(num)d years"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/utils/timesince.py:9
-#, python-format
-msgid "%(num)d month"
-msgid_plural "%(num)d months"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/utils/timesince.py:10
-#, python-format
-msgid "%(num)d week"
-msgid_plural "%(num)d weeks"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/utils/timesince.py:11
-#, python-format
-msgid "%(num)d day"
-msgid_plural "%(num)d days"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/utils/timesince.py:12
-#, python-format
-msgid "%(num)d hour"
-msgid_plural "%(num)d hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/utils/timesince.py:13
-#, python-format
-msgid "%(num)d minute"
-msgid_plural "%(num)d minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
-
-#: venv/lib/python3.14/site-packages/django/views/csrf.py:29
-msgid "Forbidden"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/csrf.py:30
-msgid "CSRF verification failed. Request aborted."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/csrf.py:34
-msgid ""
-"You are seeing this message because this HTTPS site requires a “Referer "
-"header” to be sent by your web browser, but none was sent. This header is "
-"required for security reasons, to ensure that your browser is not being "
-"hijacked by third parties."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/csrf.py:40
-msgid ""
-"If you have configured your browser to disable “Referer” headers, please re-"
-"enable them, at least for this site, or for HTTPS connections, or for “same-"
-"origin” requests."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/csrf.py:45
-msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/csrf.py:54
-msgid ""
-"You are seeing this message because this site requires a CSRF cookie when "
-"submitting forms. This cookie is required for security reasons, to ensure "
-"that your browser is not being hijacked by third parties."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/csrf.py:60
-msgid ""
-"If you have configured your browser to disable cookies, please re-enable "
-"them, at least for this site, or for “same-origin” requests."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/csrf.py:66
-msgid "More information is available with DEBUG=True."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:44
-msgid "No year specified"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:64
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:115
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:214
-msgid "Date out of range"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:94
-msgid "No month specified"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:147
-msgid "No day specified"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:194
-msgid "No week specified"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:353
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:384
-#, python-format
-msgid "No %(verbose_name_plural)s available"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:680
-#, python-format
-msgid ""
-"Future %(verbose_name_plural)s not available because "
-"%(class_name)s.allow_future is False."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/dates.py:720
-#, python-format
-msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/detail.py:56
-#, python-format
-msgid "No %(verbose_name)s found matching the query"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/list.py:70
-msgid "Page is not “last”, nor can it be converted to an int."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/list.py:77
-#, python-format
-msgid "Invalid page (%(page_number)s): %(message)s"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/generic/list.py:173
-#, python-format
-msgid "Empty list and “%(class_name)s.allow_empty” is False."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/static.py:49
-msgid "Directory indexes are not allowed here."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/static.py:51
-#, python-format
-msgid "“%(path)s” does not exist"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/static.py:68
-#: venv/lib/python3.14/site-packages/django/views/templates/directory_index.html:8
-#: venv/lib/python3.14/site-packages/django/views/templates/directory_index.html:11
-#, python-format
-msgid "Index of %(directory)s"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:7
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:204
-msgid "The install worked successfully! Congratulations!"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:206
-#, python-format
-msgid ""
-"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
-"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:208
-#, python-format
-msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:217
-msgid "Django Documentation"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:218
-msgid "Topics, references, &amp; how-to’s"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:226
-msgid "Tutorial: A Polling App"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:227
-msgid "Get started with Django"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:235
-msgid "Django Community"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/django/views/templates/default_urlconf.html:236
-msgid "Connect, get help, or contribute"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:14
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:94
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:102
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:112
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:122
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:126
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:158
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:177
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:406
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:411
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:421
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:441
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:458
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:477
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:483
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:500
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:512
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:520
-msgid "title"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:18
-msgid "password"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:287
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:306
-msgid "title a"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:291
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:317
-msgid "title b"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:295
-msgid "title c"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:299
-msgid "title d"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/modeltranslation/tests/models.py:422
-msgid "visits"
-msgstr ""
-
-#: venv/lib/python3.14/site-packages/modeltranslation/widgets.py:32
-msgid "None"
-msgstr ""
-
-#: jobs/models.py
-msgid "Job Posting"
-msgstr "وظيفة"
-
-#: jobs/models.py
-msgid "Job Postings"
-msgstr "وظائف"
-
-#: jobs/models.py
-msgid "Job Title"
-msgstr "عنوان الوظيفة"
-
-#: jobs/models.py
-msgid "Department"
-msgstr "القسم"
-
-#: jobs/models.py
-msgid "Location"
-msgstr "الموقع"
-
-#: jobs/models.py
-msgid "Job Type"
-msgstr "نوع العمل"
-
-#: jobs/models.py
-msgid "Full Time"
-msgstr "دوام كامل"
-
-#: jobs/models.py
-msgid "Part Time"
-msgstr "دوام جزئي"
-
-#: jobs/models.py
-msgid "Contract"
-msgstr "عقد"
-
-#: jobs/models.py
-msgid "Internship"
-msgstr "تدريب"
-
-#: jobs/models.py
-msgid "Requirements"
-msgstr "المتطلبات"
-
-#: jobs/models.py
-msgid "Responsibilities"
-msgstr "المسؤوليات"
-
-#: jobs/models.py
-msgid "Salary Range"
-msgstr "نطاق الراتب"
-
-#: jobs/models.py
-msgid "Job Application"
-msgstr "طلب توظيف"
-
-#: jobs/models.py
-msgid "Job Applications"
-msgstr "طلبات التوظيف"
-
-#: jobs/models.py
-msgid "Name"
-msgstr "الاسم"
-
-#: jobs/models.py
-msgid "Email"
-msgstr "البريد الإلكتروني"
-
-#: jobs/models.py
-msgid "Phone"
-msgstr "الهاتف"
-
-#: jobs/models.py
-msgid "LinkedIn URL"
-msgstr "رابط LinkedIn"
-
-#: jobs/models.py
-msgid "Cover Letter"
-msgstr "خطاب التقديم"
-
-#: jobs/models.py
-msgid "Status"
-msgstr "الحالة"
-
-#: jobs/models.py
-msgid "Pending"
-msgstr "قيد الانتظار"
-
-#: jobs/models.py
-msgid "Reviewing"
-msgstr "قيد المراجعة"
-
-#: jobs/models.py
-msgid "Accepted"
-msgstr "مقبول"
-
-#: jobs/models.py
-msgid "Rejected"
-msgstr "مرفوض"
-
-#: jobs/views.py
-msgid "Please fill in all required fields."
-msgstr "يرجى ملء جميع الحقول المطلوبة."
-
-#: jobs/views.py
-msgid "Application submitted successfully!"
-msgstr "تم تقديم الطلب بنجاح!"
-
-#: jobs/views.py
-msgid "Invalid request method."
-msgstr "طريقة طلب غير صالحة."
-
-#: templates/pages/jobs.html
-msgid "Job Openings"
-msgstr "وظائف شاغرة"
-
-#: templates/pages/jobs.html
-msgid "Join Our Team"
-msgstr "انضم لفريقنا"
-
-#: templates/pages/jobs.html
-msgid "Build your career"
-msgstr "ابنِ مستقبلك المهني"
-
-#: templates/pages/jobs.html
-msgid "with us"
-msgstr "معنا"
-
-#: templates/pages/jobs.html templates/pages/job_detail.html
-msgid "Featured"
-msgstr "مميز"
-
-#: templates/pages/jobs.html
-msgid "View Details"
-msgstr "عرض التفاصيل"
-
-#: templates/pages/jobs.html
-msgid "No job openings available at the moment."
-msgstr "لا توجد وظائف شاغرة حالياً."
-
-#: templates/pages/job_detail.html
-msgid "Back to Jobs"
-msgstr "العودة للوظائف"
-
-#: templates/pages/job_detail.html
-msgid "Job Description"
-msgstr "وصف الوظيفة"
-
-#: templates/pages/job_detail.html
-msgid "Apply Now"
-msgstr "قدم الآن"
-
-#: templates/pages/job_detail.html
-msgid "Apply for"
-msgstr "قدم للوظيفة"
-
-#: templates/pages/job_detail.html
-msgid "Fill in your details to apply for this position."
-msgstr "املأ بياناتك للتقديم على هذه الوظيفة."
-
-#: templates/pages/job_detail.html
-msgid "Full Name"
-msgstr "الاسم الكامل"
-
-#: templates/pages/job_detail.html
-msgid "Enter your full name"
-msgstr "أدخل اسمك الكامل"
-
-#: templates/pages/job_detail.html
-msgid "Enter your email"
-msgstr "أدخل بريدك الإلكتروني"
-
-#: templates/pages/job_detail.html
-msgid "Enter your phone number"
-msgstr "أدخل رقم هاتفك"
-
-#: templates/pages/job_detail.html
-msgid "https://linkedin.com/in/yourprofile"
-msgstr "https://linkedin.com/in/yourprofile"
-
-#: templates/pages/job_detail.html
-msgid "Tell us why you're the perfect fit for this role..."
-msgstr "أخبرنا لماذا أنت المرشح المثالي لهذا الدور..."
-
-#: templates/pages/job_detail.html
-msgid "Submit Application"
-msgstr "إرسال الطلب"
-
-#: templates/partials/navbar.html
-msgid "Careers"
-msgstr "وظائف"
+msgstr "شهادة"

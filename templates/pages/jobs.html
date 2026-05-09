@@ -9,15 +9,15 @@
     <section class="relative py-20 px-6 overflow-hidden text-center">
         <div class="absolute top-0 right-1/4 w-96 h-96 bg-bloom-accent-secondary/10 blur-[100px] rounded-full animate-bloom-float"></div>
         <div class="max-w-7xl mx-auto relative z-10">
-            <div class="inline-flex items-center gap-2 text-bloom-accent-secondary text-xs font-bold uppercase tracking-widest mb-4">
+            <div class="inline-flex items-center gap-2 text-bloom-accent-secondary text-xs font-bold uppercase tracking-widest mb-4 scroll-animate animate-fade-up">
                 <span class="w-6 h-px bg-bloom-accent-secondary"></span>
                 {% trans "Join Our Team" %}
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 scroll-animate animate-fade-up">
                 {% trans "Build your career" %}<br>
                 <span class="gradient-text">{% trans "with us" %}</span>
             </h1>
-            <p class="text-bloom-text-secondary max-w-2xl mx-auto text-lg leading-relaxed">
+            <p class="text-bloom-text-secondary max-w-2xl mx-auto text-lg leading-relaxed scroll-animate animate-fade-up">
                 {% trans "We're looking for talented people to join our team and help us build amazing digital experiences." %}
             </p>
         </div>
@@ -29,7 +29,7 @@
             {% if jobs %}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for job in jobs %}
-                <div class="group flex flex-col rounded- bg-bloom-bg-tertiary/50 border border-white/5 overflow-hidden hover:border-bloom-accent-primary hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-black/20 rounded-md">
+                <div class="group flex flex-col rounded- bg-bloom-bg-tertiary/50 border border-white/5 overflow-hidden hover:border-bloom-accent-primary hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-black/20 rounded-md scroll-animate animate-fade-up" data-delay="{{ forloop.counter0 }}00">
                     <div class="p-10 flex-grow flex flex-col">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="px-3 py-1 bg-bloom-accent-primary/20 text-bloom-accent-primary text-xs font-bold rounded-full uppercase">
@@ -76,9 +76,9 @@
     <!-- CTA -->
     <section class="py-24 px-6 relative overflow-hidden text-center">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-6xl font-bold mb-8">{% trans cta_title %}</h2>
-            <p class="text-lg text-bloom-text-secondary mb-12">{% trans cta_content %}</p>
-            <a href="{% url 'contact' %}" class="btn-bloom-primary px-10 py-5 text-lg">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 scroll-animate animate-scale-in">{% trans cta_title %}</h2>
+            <p class="text-lg text-bloom-text-secondary mb-12 scroll-animate animate-scale-in">{% trans cta_content %}</p>
+            <a href="{% url 'contact' %}" class="btn-bloom-primary px-10 py-5 text-lg scroll-animate animate-scale-in">
                 {% trans cta_button %}
             </a>
         </div>

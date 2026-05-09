@@ -9,15 +9,15 @@
     <section class="relative py-20 px-6 overflow-hidden">
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-bloom-accent-primary/10 blur-[100px] rounded-full animate-bloom-float"></div>
         <div class="max-w-7xl mx-auto relative z-10 text-center">
-            <div class="inline-flex items-center gap-2 text-bloom-accent-primary text-xs font-bold uppercase tracking-widest mb-4">
+            <div class="inline-flex items-center gap-2 text-bloom-accent-primary text-xs font-bold uppercase tracking-widest mb-4 scroll-animate animate-fade-up">
                 <span class="w-6 h-px bg-bloom-accent-primary"></span>
                 {% trans "Our Portfolio" %}
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 scroll-animate animate-fade-up">
                 {% trans "Showcasing our" %}<br>
                 <span class="gradient-text">{% trans "latest creations" %}</span>
             </h1>
-            <p class="text-bloom-text-secondary max-w-2xl mx-auto text-lg leading-relaxed">
+            <p class="text-bloom-text-secondary max-w-2xl mx-auto text-lg leading-relaxed scroll-animate animate-fade-up">
                 {% trans "Explore our diverse portfolio of digital products, from high-performance web applications to intuitive mobile experiences." %}
             </p>
         </div>
@@ -30,7 +30,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for project in projects %}
                 <!-- Project Card -->
-                <div class="group bg-bloom-bg-tertiary/50 border border-white/5 rounded-lg overflow-hidden hover:border-bloom-accent-primary/50 transition-all duration-500">
+                <div class="group bg-bloom-bg-tertiary/50 border border-white/5 rounded-lg overflow-hidden hover:border-bloom-accent-primary/50 transition-all duration-500 scroll-animate animate-fade-up" data-delay="{{ forloop.counter0 }}00">
                     <div class="aspect-video relative overflow-hidden">
                         {% if project.cover_image %}
                             <img src="{{ project.cover_image.url }}" alt="{{ project.title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -73,9 +73,9 @@
         <div class="max-w-5xl mx-auto glass-panel rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
             <div class="absolute top-0 right-0 w-64 h-64 bg-bloom-accent-primary/10 blur-[80px] rounded-full"></div>
             <div class="relative z-10">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">{% trans cta_title %}</h2>
-                <p class="text-bloom-text-secondary text-lg mb-10 max-w-2xl mx-auto">{% trans cta_content %}</p>
-                <a href="{% url 'contact' %}" class="btn-bloom-primary px-10 py-5 text-lg">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-animate animate-scale-in">{% trans cta_title %}</h2>
+                <p class="text-bloom-text-secondary text-lg mb-10 max-w-2xl mx-auto scroll-animate animate-scale-in">{% trans cta_content %}</p>
+                <a href="{% url 'contact' %}" class="btn-bloom-primary px-10 py-5 text-lg scroll-animate animate-scale-in">
                     {% trans cta_button %}
                 </a>
             </div>

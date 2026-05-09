@@ -9,15 +9,15 @@
     <section class="relative py-20 px-6 overflow-hidden text-center">
         <div class="absolute top-0 right-1/4 w-96 h-96 bg-bloom-accent-secondary/10 blur-[100px] rounded-full animate-bloom-float"></div>
         <div class="max-w-7xl mx-auto relative z-10">
-            <div class="inline-flex items-center gap-2 text-bloom-accent-secondary text-xs font-bold uppercase tracking-widest mb-4">
+            <div class="inline-flex items-center gap-2 text-bloom-accent-secondary text-xs font-bold uppercase tracking-widest mb-4 scroll-animate animate-fade-up">
                 <span class="w-6 h-px bg-bloom-accent-secondary"></span>
                 {% trans "Expertise" %}
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 scroll-animate animate-fade-up">
                 {% trans "Specialized digital" %}<br>
                 <span class="gradient-text">{% trans "service solutions" %}</span>
             </h1>
-            <p class="text-bloom-text-secondary max-w-2xl mx-auto text-lg leading-relaxed">
+            <p class="text-bloom-text-secondary max-w-2xl mx-auto text-lg leading-relaxed scroll-animate animate-fade-up">
                 {% trans "We combine technical excellence with strategic thinking to deliver digital products that make a real impact on your business." %}
             </p>
         </div>
@@ -30,7 +30,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {% for service in services %}
                 <!-- Service Card -->
-                <div class="group flex flex-col rounded-md bg-bloom-bg-tertiary/50 border border-white/5 overflow-hidden hover:border-bloom-accent-primary hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-black/20">
+                <div class="group flex flex-col rounded-md bg-bloom-bg-tertiary/50 border border-white/5 overflow-hidden hover:border-bloom-accent-primary hover:-translate-y-2 transition-all duration-500 shadow-2xl shadow-black/20 scroll-animate animate-fade-up" data-delay="{{ forloop.counter0 }}00">
                     <!-- Service Image -->
                     <div class="relative h-64 overflow-hidden">
                         {% if service.image %}
@@ -86,26 +86,26 @@
     <section class="py-24 px-6 bg-bloom-bg-secondary/30">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">{% trans "Our Development Process" %}</h2>
-                <p class="text-bloom-text-secondary">{% trans "How we bring your digital vision to life, step by step." %}</p>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 scroll-animate animate-fade-up">{% trans "Our Development Process" %}</h2>
+                <p class="text-bloom-text-secondary scroll-animate animate-fade-up">{% trans "How we bring your digital vision to life, step by step." %}</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
+                <div class="text-center scroll-animate animate-fade-up">
                     <div class="w-12 h-12 rounded-full bg-bloom-accent-primary text-bloom-bg-primary font-bold flex items-center justify-center mx-auto mb-6 text-xl">1</div>
                     <h4 class="font-bold mb-2">{% trans "Discovery" %}</h4>
                     <p class="text-sm text-bloom-text-tertiary">{% trans "We listen and understand your goals." %}</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center scroll-animate animate-fade-up" data-delay="100">
                     <div class="w-12 h-12 rounded-full bg-bloom-accent-secondary text-bloom-bg-primary font-bold flex items-center justify-center mx-auto mb-6 text-xl">2</div>
                     <h4 class="font-bold mb-2">{% trans "Design" %}</h4>
                     <p class="text-sm text-bloom-text-tertiary">{% trans "We craft the visual and user experience." %}</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center scroll-animate animate-fade-up" data-delay="200">
                     <div class="w-12 h-12 rounded-full bg-bloom-accent-tertiary text-bloom-bg-primary font-bold flex items-center justify-center mx-auto mb-6 text-xl">3</div>
                     <h4 class="font-bold mb-2">{% trans "Build" %}</h4>
                     <p class="text-sm text-bloom-text-tertiary">{% trans "We write high-quality, scalable code." %}</p>
                 </div>
-                <div class="text-center">
+                <div class="text-center scroll-animate animate-fade-up" data-delay="300">
                     <div class="w-12 h-12 rounded-full bg-bloom-accent-primary text-bloom-bg-primary font-bold flex items-center justify-center mx-auto mb-6 text-xl">4</div>
                     <h4 class="font-bold mb-2">{% trans "Deploy" %}</h4>
                     <p class="text-sm text-bloom-text-tertiary">{% trans "We launch and monitor performance." %}</p>
@@ -117,9 +117,9 @@
     <!-- CTA -->
     <section class="py-24 px-6 relative overflow-hidden text-center">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-6xl font-bold mb-8">{% trans cta_title %}</h2>
-            <p class="text-lg text-bloom-text-secondary mb-12">{% trans cta_content %}</p>
-            <a href="{% url 'contact' %}" class="btn-bloom-primary px-10 py-5 text-lg">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 scroll-animate animate-scale-in">{% trans cta_title %}</h2>
+            <p class="text-lg text-bloom-text-secondary mb-12 scroll-animate animate-scale-in">{% trans cta_content %}</p>
+            <a href="{% url 'contact' %}" class="btn-bloom-primary px-10 py-5 text-lg scroll-animate animate-scale-in">
                 {% trans cta_button %}
             </a>
         </div>

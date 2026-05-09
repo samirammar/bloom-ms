@@ -127,3 +127,11 @@ def contact(request):
     }
     
     return render(request, 'pages/contact.html', context)
+
+
+def custom_404(request, exception):
+    site_settings = SiteSettings.get_settings()
+    context = {
+        'site_settings': site_settings,
+    }
+    return render(request, 'pages/404.html', context, status=404)

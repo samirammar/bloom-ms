@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "404 - Page Not Found" %} - {{ site_settings.company_name }}{% endblock %}
+
+{% block content %}
+<div class="pt-24 min-h-screen bg-bloom-bg-primary flex items-center">
+    <div class="relative w-full py-32 px-6 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-bloom-accent-primary/10 blur-[100px] rounded-full"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-bloom-accent-secondary/10 blur-[100px] rounded-full"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 text-bloom-accent-primary text-xs font-bold uppercase tracking-widest mb-6">
+                <span class="w-8 h-px bg-bloom-accent-primary"></span>
+                {% trans "Error" %}
+            </div>
+            
+            <div class="relative mb-8 inline-block">
+                <h1 class="text-[150px] md:text-[200px] font-bold gradient-text leading-none">404</h1>
+                <div class="absolute inset-0 bg-bloom-gradient opacity-20 blur-[60px] rounded-full"></div>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                {% trans "Page not found" %}
+            </h2>
+            
+            <p class="text-xl text-bloom-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
+                {% trans "Oops! The page you're looking for seems to have wandered off. Let's get you back on track." %}
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="/" class="btn-bloom-primary px-8 py-4 text-lg">
+                    <i class="fas fa-home"></i>
+                    {% trans "Back to Home" %}
+                </a>
+                <a href="{% url 'contact' %}" class="btn-bloom-outline px-8 py-4 text-lg">
+                    <i class="fas fa-envelope"></i>
+                    {% trans "Contact Us" %}
+                </a>
+            </div>
+            
+            <div class="mt-20 p-8 glass-panel rounded-3xl max-w-lg mx-auto">
+                <p class="text-bloom-text-tertiary text-sm mb-4">{% trans "Looking for something specific?" %}</p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="{% url 'services' %}" class="px-4 py-2 rounded-lg bg-bloom-bg-tertiary/50 text-bloom-text-secondary text-sm hover:text-bloom-accent-primary hover:bg-bloom-accent-primary/10 transition-all">
+                        {% trans "Services" %}
+                    </a>
+                    <a href="{% url 'projects' %}" class="px-4 py-2 rounded-lg bg-bloom-bg-tertiary/50 text-bloom-text-secondary text-sm hover:text-bloom-accent-secondary hover:bg-bloom-accent-secondary/10 transition-all">
+                        {% trans "Projects" %}
+                    </a>
+                    <a href="{% url 'about' %}" class="px-4 py-2 rounded-lg bg-bloom-bg-tertiary/50 text-bloom-text-secondary text-sm hover:text-bloom-accent-tertiary hover:bg-bloom-accent-tertiary/10 transition-all">
+                        {% trans "About" %}
+                    </a>
+                    <a href="{% url 'blog:blog_list' %}" class="px-4 py-2 rounded-lg bg-bloom-bg-tertiary/50 text-bloom-text-secondary text-sm hover:text-bloom-accent-primary hover:bg-bloom-accent-primary/10 transition-all">
+                        {% trans "Blog" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

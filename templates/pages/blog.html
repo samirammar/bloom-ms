@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static i18n %}
+{% load static i18n blog_tags %}
 
 {% block title %}{% trans "Blog" %} - {{ site_settings.company_name }}{% endblock %}
 
@@ -78,13 +78,15 @@
                                 {% trans "Read More" %}
                                 <svg class="w-4 h-4 rtl:rotate-180 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                             </a>
-                            {% if post.tags %}
+                            {% with tags=post.tags|split %}
+                            {% if tags %}
                             <div class="flex gap-1 flex-wrap">
-                                {% for tag in post.tags|slice:":2" %}
+                                {% for tag in tags|slice:":2" %}
                                 <a href="{% url 'blog:blog_list' %}?tag={{ tag }}" class="text-xs text-bloom-text-tertiary hover:text-bloom-accent-primary transition-colors">#{{ tag }}</a>
                                 {% endfor %}
                             </div>
                             {% endif %}
+                            {% endwith %}
                         </div>
                     </div>
                 </div>

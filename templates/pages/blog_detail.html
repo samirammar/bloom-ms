@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static i18n %}
+{% load static i18n blog_tags %}
 
 {% block title %}{{ post.title }} - {{ site_settings.company_name }}{% endblock %}
 
@@ -30,13 +30,15 @@
             <p class="text-bloom-text-secondary text-lg leading-relaxed">
                 {{ post.short_description }}
             </p>
-            {% if post.tags %}
-            <div class="flex gap-2 mt-6">
-                {% for tag in post.tags %}
+            {% with tags=post.tags|split %}
+            {% if tags %}
+            <div class="flex flex-wrap gap-2 mt-6">
+                {% for tag in tags %}
                 <a href="{% url 'blog:blog_list' %}?tag={{ tag }}" class="px-3 py-1 bg-white/5 text-bloom-text-tertiary text-xs rounded-full hover:bg-white/10 hover:text-bloom-accent-primary transition-colors">#{{ tag }}</a>
                 {% endfor %}
             </div>
             {% endif %}
+            {% endwith %}
         </div>
     </section>
 

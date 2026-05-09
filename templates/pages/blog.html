@@ -71,7 +71,7 @@
                             <a href="{% url 'blog:blog_detail' post.slug %}">{{ post.title }}</a>
                         </h3>
                         <p class="text-bloom-text-secondary text-sm leading-relaxed mb-6 line-clamp-3">
-                            {{ post.short_description|default:post.content|truncatechars:150 }}
+                            {{ post.short_description|truncatechars:150 }}
                         </p>
                         <div class="flex items-center justify-between">
                             <a href="{% url 'blog:blog_detail' post.slug %}" class="inline-flex items-center gap-2 text-sm font-bold text-bloom-text-primary group/link hover:text-bloom-accent-primary transition-colors">

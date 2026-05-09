@@ -55,7 +55,7 @@
     <section class="py-16 px-6">
         <div class="max-w-4xl mx-auto">
             <div class="prose prose-invert max-w-none text-bloom-text-secondary leading-relaxed text-lg space-y-6">
-                {{ post.content|linebreaks }}
+                {{ post.content|safe }}
             </div>
         </div>
     </section>
@@ -86,7 +86,7 @@
                         <h3 class="text-lg font-bold mb-2 group-hover:text-bloom-accent-primary transition-colors">
                             <a href="{% url 'blog:blog_detail' rp.slug %}">{{ rp.title }}</a>
                         </h3>
-                        <p class="text-bloom-text-secondary text-sm line-clamp-2">{{ rp.short_description|default:rp.content|truncatechars:100 }}</p>
+                        <p class="text-bloom-text-secondary text-sm line-clamp-2">{{ rp.short_description|truncatechars:100 }}</p>
                     </div>
                 </div>
                 {% endfor %}

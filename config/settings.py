@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'ckeditor',
+    'ckeditor_uploader',
     'cms',
     'pages',
     'jobs',
@@ -143,6 +145,29 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 LOCALE_PATHS = [BASE_DIR / 'locale']
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            {'name': 'basic', 'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript']},
+            {'name': 'paragraph', 'items': ['NumberedList', 'BulletedList', 'Outdent', 'Indent', 'Blockquote']},
+            {'name': 'links', 'items': ['Link', 'Unlink', 'Anchor']},
+            {'name': 'insert', 'items': ['Image', 'Table', 'HorizontalRule', 'SpecialChar']},
+            {'name': 'styles', 'items': ['Format', 'Font', 'FontSize']},
+            {'name': 'colors', 'items': ['TextColor', 'BGColor']},
+            {'name': 'tools', 'items': ['Maximize', 'Source']},
+            {'name': 'others', 'items': ['RemoveFormat']},
+        ],
+        'format_tags': 'p;h1;h2;h3;h4;pre',
+        'height': 500,
+        'width': '100%',
+        'removeDialogTabs': 'link:upload',
+        'allowedContent': True,
+        'extraPlugins': ','.join(['uploadimage', 'image2', 'codesnippet', 'tableresize']),
+    },
+}
 
 CMS_PAGES_APPS = ['pages']
 CMS_PLACEHOLDER_CONF = {}

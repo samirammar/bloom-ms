@@ -7,3 +7,4 @@ django-unfold==0.92.0
 pillow==12.2.0
 sqlparse==0.5.5
 typing_extensions==4.15.0
+django-ckeditor==6.7.3

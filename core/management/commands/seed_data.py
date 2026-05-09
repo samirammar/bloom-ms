@@ -3,6 +3,7 @@ from core.models import SiteSettings
 from projects.models import Project, ProjectCategory, Testimonial
 from services.models import Service, ServiceCategory
 from jobs.models import JobPosting
+from blog.models import BlogCategory, BlogPost
 from django.utils.text import slugify
 from django.conf import settings
 
@@ -466,4 +467,143 @@ class Command(BaseCommand):
             job.save()
 
         self.stdout.write(self.style.SUCCESS('Jobs seeded.'))
+
+        # 8. Blog Categories
+        tech_cat, _ = BlogCategory.objects.get_or_create(slug='technology')
+        tech_cat.set_current_language('en')
+        tech_cat.name = 'Technology'
+        tech_cat.set_current_language('ar')
+        tech_cat.name = 'تكنولوجيا'
+        tech_cat.save()
+
+        arch_cat, _ = BlogCategory.objects.get_or_create(slug='architecture')
+        arch_cat.set_current_language('en')
+        arch_cat.name = 'Architecture'
+        arch_cat.set_current_language('ar')
+        arch_cat.name = 'هندسة برمجيات'
+        arch_cat.save()
+
+        devops_cat, _ = BlogCategory.objects.get_or_create(slug='devops')
+        devops_cat.set_current_language('en')
+        devops_cat.name = 'DevOps'
+        devops_cat.set_current_language('ar')
+        devops_cat.name = 'ديف أوبس'
+        devops_cat.save()
+
+        self.stdout.write(self.style.SUCCESS('Blog Categories seeded.'))
+
+        # 9. Blog Posts
+        blog_posts_data = [
+            {
+                'slug': 'why-microservices-matter',
+                'category': arch_cat,
+                'is_featured': True,
+                'is_published': True,
+                'title_en': 'Why Microservices Architecture Matters in 2024',
+                'title_ar': 'لماذا تهم هندسة الخدمات المصغرة في 2024',
+                'short_description_en': 'Discover how microservices can transform your business with scalability, resilience, and faster time-to-market.',
+                'short_description_ar': 'اكتشف كيف يمكن للخدمات المصغرة تحويل عملك من خلال قابلية التوسع والمرونة والوصول الأسرع إلى السوق.',
+                'content_en': 'Microservices architecture has become the backbone of modern software development. By breaking down monolithic applications into smaller, independent services, organizations can achieve unprecedented levels of scalability and maintainability.\n\nEach service in a microservices architecture is independently deployable, allowing teams to work on different services simultaneously without interfering with each other. This leads to faster development cycles and more frequent deployments.\n\nKey benefits include:\n- Independent scaling of services based on demand\n- Technology diversity - each service can use the best tech stack for its purpose\n- Improved fault isolation - a failure in one service doesn\'t bring down the entire system\n- Easier onboarding for new developers due to smaller codebases\n\nAt Bloom, we have extensive experience designing and implementing microservices architectures for enterprises of all sizes. Our team follows industry best practices to ensure your microservices are secure, observable, and cost-effective.',
+                'content_ar': 'أصبحت هندسة الخدمات المصغرة العمود الفقري لتطوير البرمجيات الحديثة. من خلال تقسيم التطبيقات المتجانسة إلى خدمات أصغر ومستقلة، يمكن للمؤسسات تحقيق مستويات غير مسبوقة من قابلية التوسع والصيانة.\n\nكل خدمة في هندسة الخدمات المصغرة قابلة للنشر بشكل مستقل، مما يسمح للفرق بالعمل على خدمات مختلفة في وقت واحد دون التدخل في عمل بعضهم البعض. يؤدي هذا إلى دورات تطوير أسرع ونشر أكثر تواتراً.\n\nتشمل الفوائد الرئيسية:\n- توسيع نطاق الخدمات بشكل مستقل حسب الطلب\n- تنوع التكنولوجيا - يمكن لكل خدمة استخدام أفضل مجموعة تقنية لغرضها\n- تحسين عزل الأعطال - فشل خدمة واحدة لا يعطل النظام بأكمله\n- سهولة انضمام المطورين الجدد بسبب قواعد البيانات الأصغر\n\nفي بلوم، لدينا خبرة واسعة في تصميم وتنفيذ بنى الخدمات المصغرة للمؤسسات من جميع الأحجام. يتبع فريقنا أفضل ممارسات الصناعة لضمان أن خدماتك المصغرة آمنة وقابلة للمراقبة وفعالة من حيث التكلفة.',
+                'tags_en': 'microservices,architecture,scalability',
+                'tags_ar': 'خدمات مصغرة,هندسة برمجيات,قابلية التوسع',
+                'meta_title_en': 'Why Microservices Architecture Matters | Bloom Digital Studio',
+                'meta_title_ar': 'لماذا تهم الخدمات المصغرة | بلوم ديجيتال',
+                'meta_description_en': 'Learn why microservices architecture is essential for modern software development.',
+                'meta_description_ar': 'تعرف على أهمية هندسة الخدمات المصغرة في تطوير البرمجيات الحديثة.',
+            },
+            {
+                'slug': 'django-best-practices',
+                'category': tech_cat,
+                'is_featured': True,
+                'is_published': True,
+                'title_en': 'Django Best Practices for 2024',
+                'title_ar': 'أفضل ممارسات Django لعام 2024',
+                'short_description_en': 'A comprehensive guide to building secure, scalable, and maintainable Django applications.',
+                'short_description_ar': 'دليل شامل لبناء تطبيقات Django آمنة وقابلة للتوسع وسهلة الصيانة.',
+                'content_en': 'Django continues to be one of the most popular web frameworks for building robust web applications. Here are our top best practices for Django development in 2024.\n\n1. Use Environment Variables: Never hardcode sensitive data like API keys, database credentials, or secret keys. Use environment variables with django-environ or python-decouple.\n\n2. Optimize Database Queries: Use select_related() and prefetch_related() to reduce the number of database queries. Always profile your queries using Django Debug Toolbar.\n\n3. Implement Proper Caching: Use Django\'s cache framework with Redis or Memcached to significantly improve response times for frequently accessed data.\n\n4. Write Comprehensive Tests: Use Django\'s test framework to write unit tests, integration tests, and end-to-end tests. Aim for at least 80% code coverage.\n\n5. Follow the App Pattern: Keep your code organized by following Django\'s app structure. Each app should have a single responsibility.',
+                'content_ar': 'يستمر Django في كونه أحد أكثر أطر العمل شيوعاً لبناء تطبيقات الويب القوية. إليك أفضل ممارساتنا لتطوير Django في 2024.\n\n1. استخدام متغيرات البيئة: لا تقم أبداً بتضمين البيانات الحساسة مثل مفاتيح API أو بيانات اعتماد قاعدة البيانات أو المفاتيح السرية في الكود. استخدم متغيرات البيئة مع django-environ أو python-decouple.\n\n2. تحسين استعلامات قاعدة البيانات: استخدم select_related() و prefetch_related() لتقليل عدد استعلامات قاعدة البيانات. قم دائماً بتحليل استعلاماتك باستخدام Django Debug Toolbar.\n\n3. تطبيق التخزين المؤقت المناسب: استخدم إطار التخزين المؤقت في Django مع Redis أو Memcached لتحسين أوقات الاستجابة بشكل كبير للبيانات التي يتم الوصول إليها بشكل متكرر.\n\n4. كتابة اختبارات شاملة: استخدم إطار الاختبار في Django لكتابة اختبارات الوحدة واختبارات التكامل واختبارات النهاية إلى النهاية. استهدف تغطية كود بنسبة 80٪ على الأقل.\n\n5. اتباع نمط التطبيقات: حافظ على تنظيم كودك باتباع هيكل تطبيقات Django. يجب أن يكون لكل تطبيق مسؤولية واحدة.',
+                'tags_en': 'django,python,web-development,best-practices',
+                'tags_ar': 'django,بايثون,تطوير الويب,أفضل الممارسات',
+                'meta_title_en': 'Django Best Practices 2024 | Bloom Digital Studio',
+                'meta_title_ar': 'أفضل ممارسات Django 2024 | بلوم ديجيتال',
+                'meta_description_en': 'Comprehensive Django best practices guide for building modern web applications.',
+                'meta_description_ar': 'دليل شامل لأفضل ممارسات Django لبناء تطبيقات ويب حديثة.',
+            },
+            {
+                'slug': 'ci-cd-pipeline-setup',
+                'category': devops_cat,
+                'is_featured': False,
+                'is_published': True,
+                'title_en': 'Setting Up a CI/CD Pipeline with GitHub Actions',
+                'title_ar': 'إعداد خط أنابيب CI/CD مع GitHub Actions',
+                'short_description_en': 'Learn how to automate your deployment pipeline using GitHub Actions for faster and more reliable releases.',
+                'short_description_ar': 'تعلم كيفية أتمتة خط أنابيب النشر باستخدام GitHub Actions لإصدارات أسرع وأكثر موثوقية.',
+                'content_en': 'Continuous Integration and Continuous Deployment (CI/CD) is essential for modern software development teams. GitHub Actions provides a powerful platform for automating your entire deployment workflow.\n\nStep 1: Define Your Workflow\nCreate a .github/workflows directory in your repository and add a YAML file defining your workflow. Specify the trigger events (push, pull request, etc.) and the jobs to run.\n\nStep 2: Set Up Testing\nConfigure your workflow to run tests automatically on every push. This ensures that code changes don\'t break existing functionality.\n\nStep 3: Build and Package\nSet up build steps to compile your application and create deployable artifacts. Use caching to speed up subsequent builds.\n\nStep 4: Deploy\nConfigure deployment to your target environment (staging, production) after successful tests and builds. Use environment secrets for sensitive data.\n\nAt Bloom, we use GitHub Actions extensively across all our projects, resulting in shorter release cycles and higher code quality.',
+                'content_ar': 'التكامل المستمر والنشر المستمر (CI/CD) أساسيان لفرق تطوير البرمجيات الحديثة. يوفر GitHub Actions منصة قوية لأتمتة سير عمل النشر بالكامل.\n\nالخطوة 1: تحديد سير العمل\nقم بإنشاء دليل .github/workflows في مستودعك وأضف ملف YAML يحدد سير عملك. حدد أحداث التشغيل (push، طلب سحب، إلخ) والمهام التي سيتم تشغيلها.\n\nالخطوة 2: إعداد الاختبارات\nقم بتكوين سير العمل لتشغيل الاختبارات تلقائياً مع كل push. يضمن هذا عدم كسر تغييرات الكود للوظائف الحالية.\n\nالخطوة 3: البناء والتعبئة\nقم بإعداد خطوات البناء لترجمة تطبيقك وإنشاء القطع القابلة للنشر. استخدم التخزين المؤقت لتسريع عمليات البناء اللاحقة.\n\nالخطوة 4: النشر\nقم بتكوين النشر إلى بيئتك المستهدفة (التجريبية، الإنتاجية) بعد نجاح الاختبارات والبناء. استخدم أسرار البيئة للبيانات الحساسة.\n\nفي بلوم، نستخدم GitHub Actions على نطاق واسع في جميع مشاريعنا، مما يؤدي إلى دورات إصدار أقصر وجودة كود أعلى.',
+                'tags_en': 'devops,ci-cd,github-actions,automation',
+                'tags_ar': 'ديف أوبس,CI/CD,github-actions,أتمتة',
+                'meta_title_en': 'CI/CD Pipeline with GitHub Actions | Bloom Digital Studio',
+                'meta_title_ar': 'خط أنابيب CI/CD مع GitHub Actions | بلوم ديجيتال',
+                'meta_description_en': 'Step-by-step guide to setting up CI/CD pipeline with GitHub Actions.',
+                'meta_description_ar': 'دليل خطوة بخطوة لإعداد خط أنابيب CI/CD مع GitHub Actions.',
+            },
+            {
+                'slug': 'ui-ux-trends-2024',
+                'category': tech_cat,
+                'is_featured': False,
+                'is_published': True,
+                'title_en': 'Top UI/UX Design Trends to Watch in 2024',
+                'title_ar': 'أهم اتجاهات تصميم UI/UX في 2024',
+                'short_description_en': 'Explore the latest design trends that are shaping user experiences across digital products.',
+                'short_description_ar': 'استكشف أحدث اتجاهات التصميم التي تشكل تجارب المستخدم عبر المنتجات الرقمية.',
+                'content_en': 'User experience continues to evolve rapidly. Here are the top UI/UX design trends that are defining 2024.\n\n1. AI-Powered Personalization: Interfaces that adapt to user behavior in real-time, offering personalized content and recommendations.\n\n2. Micro-interactions: Subtle animations and feedback mechanisms that make interfaces feel alive and responsive.\n\n3. Dark Mode 2.0: More sophisticated dark themes with better contrast, custom color schemes, and smooth transitions between modes.\n\n4. 3D Elements and Depth: Subtle 3D elements, depth effects, and parallax scrolling that create immersive experiences.\n\n5. Voice User Interfaces: Voice commands and conversational interfaces are becoming mainstream, especially in mobile and IoT applications.\n\n6. Glassmorphism: The glass effect continues to evolve with better accessibility and more refined implementations.\n\nAt Bloom, we stay at the forefront of design trends to deliver interfaces that are not only beautiful but also highly functional and accessible.',
+                'content_ar': 'تستمر تجربة المستخدم في التطور بسرعة. إليك أهم اتجاهات تصميم UI/UX التي تحدد عام 2024.\n\n1. التخصيص بالذكاء الاصطناعي: واجهات تتكيف مع سلوك المستخدم في الوقت الفعلي، وتقدم محتوى وتوصيات مخصصة.\n\n2. التفاعلات الدقيقة: رسوم متحركة دقيقة وآليات ردود فعل تجعل الواجهات تبدو حية ومستجيبة.\n\n3. الوضع الداكن 2.0: سمات داكنة أكثر تطوراً مع تباين أفضل وأنظمة ألوان مخصصة وانتقالات سلسة بين الأوضاع.\n\n4. عناصر ثلاثية الأبعاد والعمق: عناصر ثلاثية الأبعاد دقيقة وتأثيرات عمق وتمرير parallax تخلق تجارب غامرة.\n\n5. واجهات المستخدم الصوتية: الأوامر الصوتية والواجهات التحادثية أصبحت سائدة، خاصة في تطبيقات الهاتف وإنترنت الأشياء.\n\n6. الزجاجية: تأثير الزجاج يستمر في التطور مع إمكانية وصول أفضل وتنفيذات أكثر دقة.\n\nفي بلوم، نبقى في طليعة اتجاهات التصميم لنقدم واجهات ليست جميلة فحسب بل أيضاً عالية الوظائف وسهلة الوصول.',
+                'tags_en': 'ui-ux,design,trends,user-experience',
+                'tags_ar': 'UI-UX,تصميم,اتجاهات,تجربة المستخدم',
+                'meta_title_en': 'UI/UX Design Trends 2024 | Bloom Digital Studio',
+                'meta_title_ar': 'اتجاهات تصميم UI/UX 2024 | بلوم ديجيتال',
+                'meta_description_en': 'Discover the top UI/UX design trends shaping digital products in 2024.',
+                'meta_description_ar': 'اكتشف أهم اتجاهات تصميم UI/UX التي تشكل المنتجات الرقمية في 2024.',
+            },
+        ]
+
+        for bp_data in blog_posts_data:
+            title_en = bp_data.pop('title_en')
+            title_ar = bp_data.pop('title_ar')
+            short_description_en = bp_data.pop('short_description_en')
+            short_description_ar = bp_data.pop('short_description_ar')
+            content_en = bp_data.pop('content_en')
+            content_ar = bp_data.pop('content_ar')
+            tags_en = bp_data.pop('tags_en')
+            tags_ar = bp_data.pop('tags_ar')
+            meta_title_en = bp_data.pop('meta_title_en')
+            meta_title_ar = bp_data.pop('meta_title_ar')
+            meta_description_en = bp_data.pop('meta_description_en')
+            meta_description_ar = bp_data.pop('meta_description_ar')
+
+            post, created = BlogPost.objects.get_or_create(
+                slug=bp_data['slug'],
+                defaults=bp_data,
+            )
+
+            post.set_current_language('en')
+            post.title = title_en
+            post.short_description = short_description_en
+            post.content = content_en
+            post.tags = tags_en
+            post.meta_title = meta_title_en
+            post.meta_description = meta_description_en
+
+            post.set_current_language('ar')
+            post.title = title_ar
+            post.short_description = short_description_ar
+            post.content = content_ar
+            post.tags = tags_ar
+            post.meta_title = meta_title_ar
+            post.meta_description = meta_description_ar
+
+            post.save()
+
+        self.stdout.write(self.style.SUCCESS('Blog Posts seeded.'))
         self.stdout.write(self.style.SUCCESS('Database seeding completed successfully!'))

@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import RedirectView
 from pages.views import home, page_detail, about, services, projects, contact
+from blog.views import blog_list
 
 from django.conf.urls.i18n import i18n_patterns
 
@@ -17,6 +18,7 @@ urlpatterns += i18n_patterns(
     path('', home, name='home'),
     path('about/', about, name='about'),
     path('services/', services, name='services'),
+    path('blog/', include('blog.urls')),
     path('jobs/', include('jobs.urls')),
     path('projects/', projects, name='projects'),
     path('contact/', contact, name='contact'),
